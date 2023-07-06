@@ -1,15 +1,39 @@
 ---
+import "../styles/reset.css";
+import "../styles/global.css";
 ---
 
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Hello World</h1>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CPT</title>
+  </head>
+  <body class="[ bg-primary grid place-items-center ]">
+    <section class="[ flow ][ banner ][ p-2 text-center ]">
+      <h1 class="[ text-my-gray font-bold tracking-tight text-4xl ]">
+        Concordia University Nebraska Competitive Programming and Software
+        Development Team
+      </h1>
+      <p class="[ text-my-gray text-lg italic ]">
+        Welcome to our personal website. Feel free to explore our roster or
+        projects.
+      </p>
+      <section class="[ inline-flex flex-row gap-4 ]">
+        <a
+          class="p-2 bg-my-gray text-my-gray-dark font-semibold mb-2 rounded-lg hover:bg-gray-600 hover:text-white ease-in-out transition-all"
+          href="/roster"
+        >
+          View Roster</a
+        >
+        <a
+          class="p-2 bg-my-gray text-my-gray-dark font-semibold mb-2 rounded-lg hover:bg-gray-600 hover:text-white ease-in-out transition-all"
+          href="/projects"
+        >
+          View Projects</a
+        >
+      </section>
+    </section>
+  </body>
 </html>
