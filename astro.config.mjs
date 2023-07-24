@@ -1,13 +1,10 @@
 import { defineConfig } from "astro/config";
-
 import tailwind from "@astrojs/tailwind";
+
+import alpinejs from "@astrojs/alpinejs";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://cune-programming.github.io",
-  integrations: [
-    tailwind({
-      applyBaseStyles: false,
-    }),
-  ],
+  integrations: [tailwind(), alpinejs()]
 });
