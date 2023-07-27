@@ -1,0 +1,65 @@
+---
+import Navbar from "../../components/Navbar.astro";
+import qrcode from "../../images/qrcode_www.signupgenius.com.png";
+import logo from "../../images/cune-logo.png";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Escape Room</title>
+  </head>
+  <body class="flex flex-col h-screen justify-between xl:overflow-hidden">
+    <Navbar />
+    <section class="relative" id="hero">
+      <img
+        src="https://everythingbutthemime.com/wp-content/uploads/2018/02/escape-room.jpg"
+        class="w-full h-72 object-cover"
+        alt="Escape Room"
+        id="hero-img"
+      />
+      <section
+        class="absolute top-0 left-0 grid place-content-center h-full w-full bg-dark/70 text-center"
+        id="hero-content"
+      >
+        <h1 class="text-light font-light font-sans tracking-wide text-6xl">
+          Escape Room
+        </h1>
+        <p
+          class="text-gray-200 font-light tracking-wide font-sans text-2xl italic"
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+      </section>
+    </section>
+    <section
+      class="flex flex-col lg:flex-row bg-light py-4 px-12 gap-3 flex-1"
+      id="short-description"
+    >
+      <img class="lg:w-[40%] rounded-md shadow-md" src={logo} alt="CUNE Logo" />
+      <section class="flex flex-col gap-3">
+        <h2 class="text-dark text-4xl text-center lg:text-left">
+          Explore Professor ... Office, <em>Bombordia's</em> least favorite Professor!
+        </h2>
+        <p class="text-lg">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis
+          sint nobis a possimus iusto, cum exercitationem, dignissimos ex ut
+          porro quaerat quam perferendis in sit ullam. Impedit quos omnis
+          necessitatibus.
+        </p>
+      </section>
+    </section>
+    <section id="qr-code" class="flex flex-col gap-4 p-3 text-center bg-dark">
+      <h2 class="font-light font-sans text-light text-4xl">Sign Up Now!</h2>
+      <a href="https://www.signupgenius.com/go/10c0d45a8a82aa1facf8-cune#/">
+        <img
+          class="w-[50%] lg:w-[15%] mx-auto rounded-md m-3"
+          src={qrcode}
+          alt=""
+        />
+      </a>
+    </section>
+  </body>
+</html>
