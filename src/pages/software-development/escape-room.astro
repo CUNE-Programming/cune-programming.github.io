@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import Head from "../../components/Head.astro";
 import Navbar from "../../components/Navbar.astro";
 import qrcode from "../../assets/escape-room-qrcode.png";
 import escapeRoomLayout from "../../assets/escape-room-wide.jpg";
@@ -8,11 +9,12 @@ import escapeRoomDetail from "../../assets/escape-room-detail.jpeg";
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Escape Room</title>
-  </head>
+  <Head title="Escape Room">
+    <meta
+      name="description"
+      content="Concorida University, Nebraska Competitive Programming and Software Development Team's Escape Room: Bombordia's Least Favorite Professor"
+    />
+  </Head>
   <body class="flex flex-col justify-between">
     <Navbar />
     <section class="relative" id="hero">
@@ -86,11 +88,14 @@ import escapeRoomDetail from "../../assets/escape-room-detail.jpeg";
           and do it with other new people who also signed up for that timeslot.
         </p>
       </div>
-      <a href="https://www.signupgenius.com/go/10c0d45a8a82aa1facf8-cune#/">
+      <a
+        aria-label="QR Code Link"
+        href="https://www.signupgenius.com/go/10c0d45a8a82aa1facf8-cune#/"
+      >
         <Image
           class="w-[50%] mx-auto rounded-md m-3 lg:w-full"
           src={qrcode}
-          alt=""
+          alt="QR Code"
         />
       </a>
     </section>
