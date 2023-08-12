@@ -1,0 +1,22 @@
+---
+/*
+ * RosterSection.astro
+ * Ian Kollipara
+ * 2023-08-12
+ *
+ * Section for Roster Page
+ */
+
+type Props = {
+  title: string;
+};
+
+const { title } = Astro.props;
+---
+
+<h3 class="font-bold text-2xl mt-4 border-b border-b-dark mb-2">
+  {title}
+</h3>
+<p class="text-xl">
+  <slot />
+</p>

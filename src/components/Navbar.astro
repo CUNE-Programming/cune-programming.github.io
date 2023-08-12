@@ -1,60 +1,39 @@
+---
+import X from "./icons/X.astro";
+import Hamburger from "./icons/Hamburger.astro";
+import LinkButton from "./LinkButton.astro";
+---
+
 <header>
   <nav
     x-data="{showMenu: false}"
     class="bg-primary flex flex-col lg:flex-row justify-between px-4 py-4"
   >
     <section class="flex w-full lg:w-auto self-center">
-      <h2 class="text-light flex-1 tex-xl self-center lg:text-3xl font-semibold tracking-wide">Concordia Programming Team</h2>
+      <a
+        href="/"
+        class="text-light flex-1 tex-xl self-center lg:text-3xl font-semibold tracking-wide"
+        >Concordia Programming Team</a
+      >
       <button class="lg:hidden mr-4" @click="showMenu = !showMenu">
-        <svg
+        <X
           :class="`${showMenu ? 'hidden' : 'block'} stroke-light fill-light`"
-          width="40"
-          height="40"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M2 4.75A.75.75 0 0 1 2.75 4h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 4.75ZM2 10a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 10Zm0 5.25a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Z"
-            clip-rule="evenodd"></path>
-        </svg>
-        <svg
+        />
+        <Hamburger
           :class="`${showMenu ? 'block' : 'hidden'} stroke-light fill-light`"
-          width="40"
-          height="40"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12L5.47 6.53a.75.75 0 0 1 0-1.06Z"
-            clip-rule="evenodd"></path>
-        </svg>
+        />
       </button>
     </section>
     <ul
       :class="`${showMenu ? 'flex flex-col m-12 gap-10 text-center mx-auto max-w-screen-sm h-screen z-10' : 'hidden'} lg:flex lg:flex-row lg:gap-4 lg:pr-4`"
     >
-      <a
-        class="p-4 border border-light text-light font-sans border-solid rounded-md hover:border-dark hover:text-dark transition-all"
-        href="/roster">Roster</a
-      >
-      <a
-        class="p-4 border border-light text-light font-sans border-solid rounded-md hover:border-dark hover:text-dark focus:scale-95 transition-all"
-        href="/about">About Us</a
-      >
-      <a
-        class="p-4 border border-light text-light font-sans border-solid rounded-md hover:border-dark hover:text-dark focus:scale-95 transition-all"
-        href="/competitive-programming">Competitive Programming</a
-      >
-      <a
-        class="p-4 border border-light text-light font-sans border-solid rounded-md hover:border-dark hover:text-dark focus:scale-95 transition-all"
-        href="/software-development">Software Development</a
-      >
-      <a
-        class="p-4 border border-light text-light font-sans border-solid rounded-md hover:border-dark hover:text-dark focus:scale-95 transition-all"
-        href="/faq">FAQ</a
-      >
+      <LinkButton href="/roster">Roster</LinkButton>
+      <LinkButton href="/about">About Us</LinkButton>
+      <LinkButton href="/competitive-programming">
+        Competitive Programming
+      </LinkButton>
+      <LinkButton href="/software-development">Software Development</LinkButton>
+      <LinkButton href="/faq">FAQ</LinkButton>
     </ul>
   </nav>
 </header>

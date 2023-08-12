@@ -1,29 +1,43 @@
 ---
+import { Image } from "astro:assets";
 import Navbar from "../components/Navbar.astro";
-import Cross from "../components/cross.astro";
-import nibbleNibblers from "../images/Nibble_Nibblers_16x9.jpg";
-import programmingTeam from "../images/programteam_2_2.jpg";
-import cuneLogo from "../images/cune-logo.png";
-import astro from "../images/devicon_astro.webp";
-import python from "../images/logos_python.webp";
-import github from "../images/bi_github.webp";
-import vscode from "../images/devicon_vscode.webp";
-import icpc from "../images/icpc19.png";
+import Head from "../components/Head.astro";
+import Cross from "../components/icons/Cross.astro";
+import Users from "../components/icons/Users.astro";
+import ShiningStar from "../components/icons/Shining-Star.astro";
+import Resume from "../components/icons/Resume.astro";
+import nibbleNibblersPic from "../assets/nibble-nibblers.jpg";
+import programmingTeamPic from "../assets/programming-team-2022.jpg";
+import cuneLogo from "../assets/cune-logo.png";
+import astroLogo from "../assets/astro-logo.svg";
+import pythonLogo from "../assets/python-logo.svg";
+import githubLogo from "../assets/github-logo.svg";
+import vscodeLogo from "../assets/vscode-logo.svg";
+import icpcLogo from "../assets/icpc-logo.png";
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Concordia Programming Team</title>
-  </head>
+  <Head title="Concordia Programming Team">
+    <meta
+      name="description"
+      content="The Home Website for the Concordia University, Nebraska Competitive Programming and Software Development Team"
+    />
+  </Head>
   <body
     class="bg-primary text-light w-screen h-screen overflow-x-hidden overflow-y-scroll flex flex-col"
   >
     <Navbar />
     <section class="flex flex-col mx-auto text-center" id="Title Section">
-      <img class="w-full" src={cuneLogo} alt="" />
+      <Image
+        class="w-full"
+        src={cuneLogo}
+        width={cuneLogo.width}
+        height={cuneLogo.height}
+        alt=""
+        loading="eager"
+        decoding="sync"
+      />
       <h1 class="text-3xl lg:text-6xl font-sans font-bold tracking-wide">
         Concordia Programming Team
       </h1>
@@ -45,16 +59,7 @@ import icpc from "../images/icpc19.png";
           </p>
         </li>
         <li class="flex flex-col items-center">
-          <svg
-            width="100"
-            height="100"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M12 10a4 4 0 1 0 0-8a4 4 0 0 0 0 8Zm-6.5 3a2.5 2.5 0 1 0 0-5a2.5 2.5 0 0 0 0 5ZM21 10.5a2.5 2.5 0 1 1-5 0a2.5 2.5 0 0 1 5 0Zm-9 .5a5 5 0 0 1 5 5v6H7v-6a5 5 0 0 1 5-5Zm-7 5c0-.693.1-1.362.288-1.994l-.17.014A3.5 3.5 0 0 0 2 17.5V22h3v-6Zm17 6v-4.5a3.5 3.5 0 0 0-3.288-3.494c.187.632.288 1.301.288 1.994v6h3Z"
-            ></path>
-          </svg>
+          <Users />
           <h3 class="font-semibold tracking-wide text-2xl">Team-Based</h3>
           <p>
             We recognize that programming is more than an individual. Grow in
@@ -62,22 +67,7 @@ import icpc from "../images/icpc19.png";
           </p>
         </li>
         <li class="flex flex-col items-center">
-          <svg
-            width="100"
-            height="100"
-            viewBox="0 0 32 32"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g fill="none">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M10 9h4m-4 7h12m-12 4h12m-12 4h4m-6 5h16a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v22a2 2 0 0 0 2 2Z"
-              ></path>
-              <circle cx="22" cy="9" r=".5" fill="#000000"></circle>
-            </g>
-          </svg>
+          <Resume />
           <h3 class="font-semibold tracking-wide text-2xl">
             Power Up your Resume
           </h3>
@@ -88,22 +78,7 @@ import icpc from "../images/icpc19.png";
           </p>
         </li>
         <li class="flex flex-col items-center">
-          <svg
-            width="100"
-            height="100"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g fill="none" stroke-width="1.5">
-              <path
-                d="M10.577 8.704C11.21 7.568 11.527 7 12 7c.473 0 .79.568 1.423 1.704l.164.294c.18.323.27.484.41.59c.14.107.316.147.665.226l.318.072c1.23.278 1.845.417 1.991.888c.147.47-.273.96-1.111 1.941l-.217.254c-.238.278-.357.418-.41.59c-.055.172-.037.358 0 .73l.032.338c.127 1.308.19 1.962-.193 2.253c-.383.29-.958.026-2.11-.504l-.298-.138c-.327-.15-.49-.226-.664-.226c-.173 0-.337.076-.664.226l-.298.138c-1.152.53-1.727.795-2.11.504c-.383-.29-.32-.945-.193-2.253l.032-.338c.037-.372.055-.558 0-.73c-.053-.172-.172-.312-.41-.59l-.217-.254c-.838-.98-1.258-1.47-1.111-1.941c.146-.47.76-.61 1.99-.888l.319-.072c.35-.08.524-.119.665-.225c.14-.107.23-.268.41-.59l.164-.295Z"
-              ></path>
-              <path
-                stroke-linecap="round"
-                d="M12 2v2m0 16v2M2 12h2m16 0h2M6 18l.343-.343M17.657 6.343L18 6m0 12l-.343-.343M6.343 6.343L6 6"
-              ></path>
-            </g>
-          </svg>
+          <ShiningStar />
           <h3 class="font-semibold tracking-wide text-2xl">Be Known</h3>
           <p>
             At CUNE you aren't just another face, you are a loved and valued
@@ -114,15 +89,19 @@ import icpc from "../images/icpc19.png";
       </ul>
     </section>
     <section
-      class="flex flex-col gap-10 lg:flex-row lg:px-10 xl:px-52 py-12 bg-dark"
+      class="flex flex-col gap-10 lg:flex-row lg:px-10 xl:px-52 py-12 bg-dark px-10"
     >
-      <img
-        class="w-[50%] rounded-lg mx-auto"
-        src={nibbleNibblers}
+      <Image
+        class="lg:w-[50%] rounded-lg px-4 lg:mx-auto object-contain"
+        src={nibbleNibblersPic}
+        width={nibbleNibblersPic.width}
+        height={nibbleNibblersPic.height}
         alt="The Nibble Nibblers Team"
       />
       <div class="mx-auto text-center">
-        <h2 class="text-center text-2xl font-sans">Software Development</h2>
+        <h2 class="text-center text-2xl lg:text-4xl font-sans">
+          Software Development
+        </h2>
         <p class="text-xl mt-12">
           We use a variety of industry-standard languages and tools to build
           real-world projects. To learn more check out
@@ -133,22 +112,45 @@ import icpc from "../images/icpc19.png";
             Software Development
           </a>.
         </p>
-        <div
-          class="grid grid-cols-2 place-items-center lg:flex lg:flex-row justify-center gap-10 mt-12 lg:mt-24 stroke-light fill-light"
-        >
-          <img class="w-16 md:w-24" src={python} alt="python" />
-          <img class="w-16 md:w-24" src={vscode} alt="vscode" />
-          <img class="w-16 md:w-24" src={github} alt="github" />
-          <img class="w-16 md:w-24" src={astro} alt="astro" />
+        <div class="grid grid-cols-3 mx-4 gap-10 mt-12 lg:mt-24">
+          <Image
+            class=""
+            src={pythonLogo}
+            height={pythonLogo.height}
+            width={pythonLogo.width}
+            alt="python"
+          />
+          <Image
+            class=""
+            src={githubLogo}
+            height={githubLogo.height}
+            width={githubLogo.width}
+            alt="github"
+          />
+          <Image
+            class=""
+            src={astroLogo}
+            height={astroLogo.height}
+            width={astroLogo.width}
+            alt="astro"
+          />
         </div>
       </div>
     </section>
     <section
-      class="flex flex-col gap-10 lg:flex-row-reverse lg:px-10 xl:px-52 py-12"
+      class="flex flex-col gap-10 lg:flex-row-reverse lg:px-10 xl:px-52 py-12 px-10"
     >
-      <img class="w-[50%] rounded-lg mx-auto" src={programmingTeam} alt="" />
+      <Image
+        class="lg:w-[50%] rounded-lg mx-auto object-cover px-4"
+        src={programmingTeamPic}
+        width={programmingTeamPic.width}
+        height={programmingTeamPic.height}
+        alt="Programming Team Picture"
+      />
       <div class="mx-auto text-center">
-        <h2 class="text-2xl font-sans">Competitive Programming</h2>
+        <h2 class="text-center text-2xl lg:text-4xl font-sans">
+          Competitive Programming
+        </h2>
         <p class="text-xl mt-12">
           Learn and compete in nation-wide programming competitions using Python
           and C. CPT primarily competes in <a
@@ -159,7 +161,13 @@ import icpc from "../images/icpc19.png";
             href="/competitive-programming">Competitive Programming</a
           >.
         </p>
-        <img class="w-[75%] mx-auto mt-12" src={icpc} alt="icpc" />
+        <Image
+          class="w-[75%] mx-auto pt-12 rounded-lg object-cover"
+          src={icpcLogo}
+          width={icpcLogo.width}
+          height={icpcLogo.height}
+          alt="icpc"
+        />
       </div>
     </section>
   </body>

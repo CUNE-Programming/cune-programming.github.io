@@ -1,0 +1,29 @@
+---
+/*
+ * ProjectAbstract.astro
+ * Ian Kollipara
+ * 2023-08-12
+ *
+ * Abstract for a Project shown on Software Development Page
+ */
+
+import { ImageMetadata } from "astro";
+import Hero from "./Hero.astro";
+
+type Props = {
+  img: ImageMetadata;
+  alt: string;
+  href: string;
+};
+
+const { img, alt, href } = Astro.props;
+---
+
+<li
+  onclick={`window.location.href = '${href}'`}
+  class="relative shadow-2xl transition-all duration-500 hover:-translate-y-5 hover:ring-dark hover:ring-8 hover:ring-offset-accent hover:ring-offset-4 hover:cursor-pointer"
+>
+  <Hero {img} {alt} gradient={70}>
+    <slot />
+  </Hero>
+</li>

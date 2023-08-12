@@ -1,0 +1,62 @@
+---
+/*
+ * RosterHeader.astro
+ * Ian Kollipara
+ * 2023-08-12
+ *
+ * Roster Page Header
+ */
+
+import { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+type Props = {
+  img: ImageMetadata;
+  name: string;
+  role: string;
+  interests: string[];
+  email: string;
+};
+
+const { img, name, role, interests, email } = Astro.props;
+---
+
+<section
+  class="flex flex-col lg:flex-row gap-5 lg:border lg:border-dark rounded p-3 mt-2 lg:shadow-md"
+>
+  <Image
+    class="mx-auto lg:w-[20%] object-cover rounded"
+    src={img}
+    width={img.width}
+    height={img.height}
+    alt={name}
+  />
+  <section class="flex-1 flex flex-col">
+    <div
+      class="flex flex-col lg:flex-row items-center lg:justify-between border-b border-b-dark pb-2 lg:items-baseline px-4"
+    >
+      <h1 class="font-bold text-5xl tracking-wide">{name}</h1>
+      <p class="font-sans italic text-3xl text-gray-600">{role}</p>
+    </div>
+    <section class="grid gap-3 grid-cols-1 lg:grid-cols-2">
+      <section>
+        <p class="font-bold text-2xl">Interests</p>
+        <ul class="list-disc list-inside text-lg">
+          {interests.map((interest) => <li>{interest}</li>)}
+        </ul>
+      </section>
+      <section>
+        <h2 class="font-bold text-2xl">Contact Information</h2>
+        <p class="text-lg">
+          Email:
+          <a
+            class="underline underline-offset-2 decoration-primary"
+            href={`mailto:${email}`}
+          >
+            {email}
+          </a>
+        </p>
+      </section>
+    </section>
+  </section>
+</section>

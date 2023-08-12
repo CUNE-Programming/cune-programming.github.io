@@ -1,0 +1,91 @@
+---
+/*
+ * RosterAbstract.astro
+ * Ian Kollipara
+ * 2023-08-12
+ *
+ * Short Form Member Description used on Roster Page
+ */
+
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+type Props = {
+  img: ImageMetadata;
+  name: string;
+  role: string;
+  from: string;
+  program?: string;
+  projects?: [string, string][];
+};
+
+function slugify(name: string) {
+  return name.replaceAll(" ", "-").toLowerCase();
+}
+
+const { img, name, role, program = "", projects = [] } = Astro.props;
+const from_ = Astro.props["from"];
+
+const rosterHref = `/roster/${slugify(name)}`;
+---
+
+<li
+  role="link"
+  onclick={`window.location.href = "${rosterHref}"`}
+  class="flex flex-col lg:flex-row gap-4 mx-3 shadow-lg p-3 rounded-md border border-dark hover:-translate-y-5 transition-all hover:cursor-pointer hover:shadow-accent"
+>
+  <Image
+    class="h-[10rem] w-[10rem] object-cover rounded-full my-auto mx-auto"
+    src={img}
+    width={img.width}
+    height={img.height}
+    alt={name}
+  />
+  <section class="flex-1 lg:border-l lg:border-l-dark lg:pl-2">
+    <h3
+      class="font-light text-center tracking-wide text-2xl border-b border-b-dark lg:text-left"
+    >
+      {name}
+    </h3>
+    <table class="table-auto w-full">
+      <tbody class="text-lg">
+        <tr>
+          <td class="font-bold">Role</td>
+          <td>{role}</td>
+        </tr>
+        <tr>
+          <td class="font-bold">From</td>
+          <td>{from_}</td>
+        </tr>
+        {
+          program && (
+            <tr>
+              <td class="font-bold">Program</td>
+              <td>{program}</td>
+            </tr>
+          )
+        }
+        <tr>
+          <td class="font-bold">Projects</td>
+          <td>
+            <ul class="list-none list-inside">
+              {
+                projects.map(([name, href]) => (
+                  <li>
+                    <a
+                      class="underline underline-offset-2 decoration-primary"
+                      {href}
+                    >
+                      {name}
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
+          </td>
+          <slot />
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</li>

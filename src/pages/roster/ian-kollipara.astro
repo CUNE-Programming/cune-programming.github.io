@@ -1,0 +1,35 @@
+---
+import IAN_KOLLIPARA_ROSTER_IMG from "../../assets/roster/co-ian-kollipara.jpg";
+import RosterHeader from "../../components/RosterHeader.astro";
+import RosterLayout from "../../layouts/RosterLayout.astro";
+import RosterSection from "../../components/RosterSection.astro";
+
+const name = "Ian Kollipara";
+const role = "Assistant Coach";
+const email = "ian.kollipara@cune.edu";
+const interests = [
+  "Functional Programming",
+  "Computer Science Education",
+  "Super Smash Bros. Ultimate",
+  "Full Stack Web Development",
+  "Note-taking",
+];
+---
+
+<RosterLayout {name} {role}>
+  <RosterHeader
+    {name}
+    {role}
+    {email}
+    {interests}
+    img={IAN_KOLLIPARA_ROSTER_IMG}
+  />
+  <RosterSection title="Biography">
+    Ian Kollipara is a CUNE Almuni of 2023. He graduated with a B.S. in Computer
+    Science and B.S. Ed in Elementary Education. He is currently pursuing his
+    PhD at the University of Nebraska, Lincoln. He is also the head of the
+    Software Development side of the Team. His most recent projects include the
+    first version of the Escape Room, the Team Website, and the AIR@NE website
+    done for his PhD.
+  </RosterSection>
+</RosterLayout>

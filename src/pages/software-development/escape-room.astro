@@ -1,9 +1,9 @@
 ---
+import { Image } from "astro:assets";
 import Navbar from "../../components/Navbar.astro";
-import qrcode from "../../images/qrcode_www.signupgenius.com.png";
-import logo from "../../images/cune-logo.png";
-import escapeRoomLayout from "../../images/Escape Room Layout.jpg";
-import escapeRoomDetail from "../../images/Escape Room Detail.jpeg";
+import qrcode from "../../assets/escape-room-qrcode.png";
+import escapeRoomLayout from "../../assets/escape-room-wide.jpg";
+import escapeRoomDetail from "../../assets/escape-room-detail.jpeg";
 ---
 
 <!DOCTYPE html>
@@ -16,11 +16,12 @@ import escapeRoomDetail from "../../images/Escape Room Detail.jpeg";
   <body class="flex flex-col justify-between">
     <Navbar />
     <section class="relative" id="hero">
-      <img
+      <Image
         src={escapeRoomLayout}
         class="w-full h-72 lg:h-[30rem] object-cover"
         alt="Escape Room"
         id="hero-img"
+        loading="eager"
       />
       <section
         class="absolute top-0 left-0 grid place-content-center h-full w-full bg-dark/70 text-center"
@@ -32,7 +33,7 @@ import escapeRoomDetail from "../../images/Escape Room Detail.jpeg";
         <p
           class="text-gray-200 font-light tracking-wide font-sans text-2xl italic"
         >
-        Can you escape the office?
+          Can you escape the office?
         </p>
       </section>
     </section>
@@ -40,14 +41,15 @@ import escapeRoomDetail from "../../images/Escape Room Detail.jpeg";
       class="flex flex-col lg:flex-row bg-light py-4 px-12 gap-3 flex-1"
       id="short-description"
     >
-      <img
+      <Image
         class="lg:w-[20%] rounded-md shadow-md"
         src={escapeRoomDetail}
         alt="CUNE Logo"
       />
       <section class="flex flex-col gap-3">
         <h2 class="text-dark text-4xl text-center lg:text-left">
-          Explore Professor ... Office, <em>Bombordia's</em> least favorite Professor!
+          Explore Professor ... Office, <em>Bombordia's</em> least favorite
+          Professor!
         </h2>
         <p class="text-lg">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis
@@ -62,16 +64,30 @@ import escapeRoomDetail from "../../images/Escape Room Detail.jpeg";
       class="flex flex-col gap-4 p-3 text-center bg-dark lg:flex-row lg:px-10 justify-end"
     >
       <div class="flex flex-col gap-4 flex-1 text-light text-left">
-        <h2 class="font-light font-sans text-4xl text-center lg:text-left">Sign Up Now!</h2>
+        <h2 class="font-light font-sans text-4xl text-center lg:text-left">
+          Sign Up Now!
+        </h2>
         <ul class="font-sans text-xl list-decimal list-inside lg:text-2xl">
           <li>Find some friends (or not)</li>
-          <li>Sign up at the <a class="underline underline-offset-2 decoration-light hover:decoration-primary" href="https://www.signupgenius.com/go/10c0d45a8a82aa1facf8-cune#/">link</a> for a specific time</li>
-          <li>Go to Dunklau (the Science Building) at your alloted time and do the escape room.</li>
+          <li>
+            Sign up at the <a
+              class="underline underline-offset-2 decoration-light hover:decoration-primary"
+              href="https://www.signupgenius.com/go/10c0d45a8a82aa1facf8-cune#/"
+              >link</a
+            > for a specific time
+          </li>
+          <li>
+            Go to Dunklau (the Science Building) at your alloted time and do the
+            escape room.
+          </li>
         </ul>
-        <p class="text-xl lg:text-2xl">If you don't have anyone to do it with, you can just pick a time slot and do it with other new people who also signed up for that timeslot.</p>
+        <p class="text-xl lg:text-2xl">
+          If you don't have anyone to do it with, you can just pick a time slot
+          and do it with other new people who also signed up for that timeslot.
+        </p>
       </div>
       <a href="https://www.signupgenius.com/go/10c0d45a8a82aa1facf8-cune#/">
-        <img
+        <Image
           class="w-[50%] mx-auto rounded-md m-3 lg:w-full"
           src={qrcode}
           alt=""

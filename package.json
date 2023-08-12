@@ -11,10 +11,17 @@
   },
   "dependencies": {
     "@astrojs/alpinejs": "^0.2.2",
+    "@astrojs/sitemap": "^2.0.1",
     "@astrojs/tailwind": "^4.0.0",
     "@types/alpinejs": "^3.7.2",
     "alpinejs": "^3.12.3",
     "astro": "^2.9.2",
+    "astro-robots-txt": "^0.5.0",
     "tailwindcss": "^3.3.3"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.1",
+    "prettier-plugin-astro": "^0.11.0",
+    "sharp": "^0.32.4"
   }
 }

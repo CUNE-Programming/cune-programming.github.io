@@ -1,0 +1,39 @@
+---
+/*
+ * Hero.astro
+ * Ian Kollipara
+ * 2023-08-12
+ *
+ * Hero Component
+ */
+
+import { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+export type Props = {
+  img: ImageMetadata;
+  alt: string;
+  class?: string;
+  gradient: number;
+};
+
+const { img, alt, gradient = 95, ...rest } = Astro.props;
+---
+
+<section class="relative">
+  <Image
+    class="w-full h-72 lg:h-[30rem] object-cover"
+    src={img}
+    {alt}
+    loading="eager"
+    width={img.width}
+    height={img.height}
+  />
+  <section
+    class={`absolute top-0 left-0 grid place-content-center h-full w-full bg-dark/${gradient} text-center ${
+      rest["class"] ?? ""
+    }`}
+  >
+    <slot />
+  </section>
+</section>

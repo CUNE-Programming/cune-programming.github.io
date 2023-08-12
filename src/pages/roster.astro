@@ -1,0 +1,50 @@
+---
+import Head from "../components/Head.astro";
+import Navbar from "../components/Navbar.astro";
+import COACH_IAN_KOLLIPARA from "../assets/roster/co-ian-kollipara.jpg";
+import RosterAbstract from "../components/RosterAbstract.astro";
+---
+
+<!DOCTYPE html>
+<html>
+  <Head title="Concordia Programming Team Roster">
+    <meta
+      name="description"
+      content="Concorida University, Nebraska Programming Team Roster"
+    />
+  </Head>
+  <body>
+    <Navbar />
+    <h1
+      class="bg-primary text-light font-sans font-bold tracking-wide text-center p-12 text-5xl"
+    >
+      Roster
+    </h1>
+    <section class="w-full grid lg:grid-cols-3 gap-4">
+      <section>
+        <h2 class="text-3xl font-bold tracking-wide text-center pb-5">
+          Coaches
+        </h2>
+        <ul>
+          <RosterAbstract
+            img={COACH_IAN_KOLLIPARA}
+            name="Ian Kollipara"
+            from="Lincoln, Nebraska"
+            role="Assistant Coach"
+            program="PhD Student at University of Nebraska, Lincoln"
+            projects={[
+              ["Escape Room", "/software-development/escape-room"],
+              ["Team Website", "/"],
+            ]}
+          />
+        </ul>
+      </section>
+      <section>
+        <h2 class="text-3xl font-bold tracking-wide text-center">Members</h2>
+      </section>
+      <section>
+        <h2 class="text-3xl font-bold tracking-wide text-center">Alumni</h2>
+      </section>
+    </section>
+  </body>
+</html>
