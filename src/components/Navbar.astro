@@ -15,7 +15,11 @@ import LinkButton from "./LinkButton.astro";
         class="text-light flex-1 tex-xl self-center lg:text-3xl font-semibold tracking-wide"
         >Concordia Programming Team</a
       >
-      <button class="lg:hidden mr-4" @click="showMenu = !showMenu">
+      <button
+        aria-label="Menu"
+        class="lg:hidden mr-4"
+        @click="showMenu = !showMenu"
+      >
         <X
           :class="`${showMenu ? 'hidden' : 'block'} stroke-light fill-light`"
         />
