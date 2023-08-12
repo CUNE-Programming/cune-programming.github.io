@@ -23,7 +23,7 @@ const { img, alt, href } = Astro.props;
   onclick={`window.location.href = '${href}'`}
   class="relative shadow-2xl transition-all duration-500 hover:-translate-y-5 hover:ring-dark hover:ring-8 hover:ring-offset-accent hover:ring-offset-4 hover:cursor-pointer"
 >
-  <Hero {img} {alt} gradient={70}>
+  <Hero {img} {alt} class="bg-dark/70">
     <slot />
   </Hero>
 </li>

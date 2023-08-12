@@ -24,7 +24,7 @@ import LinkButton from "./LinkButton.astro";
         />
       </button>
     </section>
-    <ul
+    <section
       :class="`${showMenu ? 'flex flex-col m-12 gap-10 text-center mx-auto max-w-screen-sm h-screen z-10' : 'hidden'} lg:flex lg:flex-row lg:gap-4 lg:pr-4`"
     >
       <LinkButton href="/roster">Roster</LinkButton>
@@ -34,6 +34,6 @@ import LinkButton from "./LinkButton.astro";
       </LinkButton>
       <LinkButton href="/software-development">Software Development</LinkButton>
       <LinkButton href="/faq">FAQ</LinkButton>
-    </ul>
+    </section>
   </nav>
 </header>

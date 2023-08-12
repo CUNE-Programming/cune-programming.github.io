@@ -14,10 +14,9 @@ export type Props = {
   img: ImageMetadata;
   alt: string;
   class?: string;
-  gradient: number;
 };
 
-const { img, alt, gradient = 95, ...rest } = Astro.props;
+const { img, alt, ...rest } = Astro.props;
 ---
 
 <section class="relative">
@@ -30,7 +29,7 @@ const { img, alt, gradient = 95, ...rest } = Astro.props;
     height={img.height}
   />
   <section
-    class={`absolute top-0 left-0 grid place-content-center h-full w-full bg-dark/${gradient} text-center ${
+    class={`absolute top-0 left-0 grid place-content-center h-full w-full text-center ${
       rest["class"] ?? ""
     }`}
   >
