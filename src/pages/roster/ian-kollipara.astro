@@ -21,30 +21,24 @@ import RosterLayout from "../../layouts/RosterLayout.astro";
 import RosterSection from "../../components/RosterSection.astro";
 import RosterImage from "../../components/RosterImage.astro";
 
-/* The name you want displayed. Use Capital Letters */
-const name = "Ian Kollipara";
-/* The "role" you have on the team. I would just use your year in school, like Senior, Junior, etc. */
-const role = "Assistant Coach";
-/* Your CUNE Email */
-const email = "ian.kollipara@cune.edu";
-/* A List of your Interests. Make sure to write them how you want them to show up */
-const interests = [
-  "Functional Programming",
-  "Computer Science Education",
-  "Super Smash Bros. Ultimate",
-  "Full Stack Web Development",
-  "Note-taking",
-];
+const data = {
+  img: IAN_KOLLIPARA_ROSTER_IMG /* The Profile Picture for your roster page */,
+  name: "Ian Kollipara" /* The name you want displayed. Use Capital Letters */,
+  role: "Assistant Coach" /* The "role" you have on the team. I would just use your year in school, like Senior, Junior, etc. */,
+  email: "ian.kollipara@cune.edu" /* Your CUNE Email */,
+  /* A List of your Interests. Make sure to write them how you want them to show up */
+  interests: [
+    "Functional Programming",
+    "Computer Science Education",
+    "Super Smash Bros. Ultimate",
+    "Full Stack Web Development",
+    "Note-taking",
+  ],
+};
 ---
 
-<RosterLayout {name} {role}>
-  <RosterHeader
-    {name}
-    {role}
-    {email}
-    {interests}
-    img={IAN_KOLLIPARA_ROSTER_IMG}
-  />
+<RosterLayout {...data}>
+  <RosterHeader {...data} />
   <!-- For any extra sections you would like to add, just create a new "RosterSection" and give it a title, then just write.  -->
   <!-- For any images, use the RosterImage Component imported at the Top. -->
   <RosterSection title="Biography">
