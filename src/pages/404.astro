@@ -12,12 +12,14 @@ import { Image } from "astro:assets";
   </Head>
   <body class="bg-primary">
     <Navbar />
-    <main class="grid w-full h-[85vh] place-content-center text-light">
+    <main class="flex flex-col text-light items-center px-5">
       <Image
         src={CUNE_LOGO}
         alt="CUNE Logo"
         width={CUNE_LOGO.width}
         height={CUNE_LOGO.height}
+        loading="eager"
+        decoding="sync"
       />
       <h1 class="text-6xl font-bold tracking-wide text-center italic">
         Uh Oh.
@@ -27,7 +29,7 @@ import { Image } from "astro:assets";
         back later!
       </p>
       <a
-        class="bg-light text-dark py-3 px-5 rounded hover:bg-accent active:scale-95 transition-all duration-200 mx-auto text-6xl text-center font-bold tracking-wide mt-5"
+        class="bg-light text-dark py-3 px-5 rounded hover:bg-accent active:scale-95 transition-all duration-200 mx-auto text-6xl text-center font-bold tracking-wide mt-12"
         href="/">Back</a
       >
     </main>
