@@ -1,0 +1,35 @@
+---
+import Head from "../components/Head.astro";
+import Navbar from "../components/Navbar.astro";
+import CUNE_LOGO from "../assets/cune-logo.png";
+import { Image } from "astro:assets";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <Head title="CPT - Uh Oh.">
+    <meta name="description" content="Looks like you're in the wrong place" />
+  </Head>
+  <body class="bg-primary">
+    <Navbar />
+    <main class="grid w-full h-[85vh] place-content-center text-light">
+      <Image
+        src={CUNE_LOGO}
+        alt="CUNE Logo"
+        width={CUNE_LOGO.width}
+        height={CUNE_LOGO.height}
+      />
+      <h1 class="text-6xl font-bold tracking-wide text-center italic">
+        Uh Oh.
+      </h1>
+      <p class="text-6xl font-bold tracking-wide text-center">
+        Looks like you found a page that's not ready yet. <br /><br /> Check
+        back later!
+      </p>
+      <a
+        class="bg-light text-dark py-3 px-5 rounded hover:bg-accent active:scale-95 transition-all duration-200 mx-auto text-6xl text-center font-bold tracking-wide mt-5"
+        href="/">Back</a
+      >
+    </main>
+  </body>
+</html>
