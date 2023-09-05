@@ -3,6 +3,7 @@ import Head from "../components/Head.astro";
 import Navbar from "../components/Navbar.astro";
 import COACH_IAN_KOLLIPARA from "../assets/roster/co-ian-kollipara.jpg";
 import RosterAbstract from "../components/RosterAbstract.astro";
+import ETHAN_LHEUREUX_ROSTER_IMG from "../../assets/roster/mem-ethan-lheureux.jpeg";
 ---
 
 <!DOCTYPE html>
@@ -41,6 +42,17 @@ import RosterAbstract from "../components/RosterAbstract.astro";
       </section>
       <section>
         <h2 class="text-3xl font-bold tracking-wide text-center">Members</h2>
+        <RosterAbstract
+            img={ETHAN_LHEUREUX_ROSTER_IMG}
+            name="Ethan L'Heureux"
+            from="Cedar Falls, Iowa"
+            role="Freshman"
+            program="BS Student at Concordia University Nebraska"
+            projects={[
+              ["Escape Room", "/software-development/escape-room"],
+              ["Team Website", "/"],
+            ]}
+          />
       </section>
       <section>
         <h2 class="text-3xl font-bold tracking-wide text-center">Alumni</h2>
