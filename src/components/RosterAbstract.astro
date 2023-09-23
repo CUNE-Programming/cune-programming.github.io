@@ -20,7 +20,7 @@ type Props = {
 };
 
 function slugify(name: string) {
-  return name.replaceAll(" ", "-").toLowerCase();
+  return name.replaceAll(" ", "-").replaceAll("'", "").toLowerCase();
 }
 
 const { img, name, role, program = "", projects = [] } = Astro.props;
