@@ -8,7 +8,7 @@
  */
 
 /* Make sure to import your roster image just like this, as then Astro will optimize the formating of it. */
-import IAN_KOLLIPARA_ROSTER_IMG from "../../assets/roster/co-ian-kollipara.jpg";
+import TYTUS_WOODBURN from "../../assets/roster/tytus-woodburn.jpeg";
 
 /*
  * These components are used to build your roster page.
@@ -22,17 +22,15 @@ import RosterSection from "../../components/RosterSection.astro";
 import RosterImage from "../../components/RosterImage.astro";
 
 const data = {
-  img: IAN_KOLLIPARA_ROSTER_IMG /* The Profile Picture for your roster page */,
+  img: TYTUS_WOODBURN /* The Profile Picture for your roster page */,
   name: "Tytus Woodburn" /* The name you want displayed. Use Capital Letters */,
   role: "Junior" /* The "role" you have on the team. I would just use your year in school, like Senior, Junior, etc. */,
-  email: "ian.kollipara@cune.edu" /* Your CUNE Email */,
+  email: "tytus.woodburn@cune.org" /* Your CUNE Email */,
   /* A List of your Interests. Make sure to write them how you want them to show up */
   interests: [
-    "Functional Programming",
-    "Computer Science Education",
-    "Super Smash Bros. Ultimate",
-    "Full Stack Web Development",
-    "Note-taking",
+    "Valorant",
+    "Competitive Programming",
+    "3D printing",
   ],
 };
 ---
@@ -42,11 +40,8 @@ const data = {
   <!-- For any extra sections you would like to add, just create a new "RosterSection" and give it a title, then just write.  -->
   <!-- For any images, use the RosterImage Component imported at the Top. -->
   <RosterSection title="Biography">
-    Ian Kollipara is a CUNE Almuni of 2023. He graduated with a B.S. in Computer
-    Science and B.S. Ed in Elementary Education. He is currently pursuing his
-    PhD at the University of Nebraska, Lincoln. He is also the head of the
-    Software Development side of the Team. His most recent projects include the
-    first version of the Escape Room, the Team Website, and the AIR@NE website
-    done for his PhD.
+    Tytus Woodburn is a Undergraduate student at Concordia University persuing a degree in
+    computer science. He enjoys 3d modeling, and is the team captain for Concordia's Valorant
+    Esports team.
   </RosterSection>
 </RosterLayout>
