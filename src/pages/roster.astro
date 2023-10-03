@@ -2,6 +2,7 @@
 import Head from "../components/Head.astro";
 import Navbar from "../components/Navbar.astro";
 import COACH_IAN_KOLLIPARA from "../assets/roster/co-ian-kollipara.jpg";
+import ALMIGHTY_MASTER_OF_EARTH_ANDREW from "../assets/roster/andrew.jpg";
 import RosterAbstract from "../components/RosterAbstract.astro";
 ---
 
@@ -28,7 +29,7 @@ import RosterAbstract from "../components/RosterAbstract.astro";
         <ul>
           <RosterAbstract
             img={COACH_IAN_KOLLIPARA}
-            name="Ian Kollipara"
+            name="Ian Test Kollipara"
             from="Lincoln, Nebraska"
             role="Assistant Coach"
             program="PhD Student at University of Nebraska, Lincoln"
@@ -36,6 +37,13 @@ import RosterAbstract from "../components/RosterAbstract.astro";
               ["Escape Room", "/software-development/escape-room"],
               ["Team Website", "/"],
             ]}
+          />
+          <RosterAbstract
+            img={ALMIGHTY_MASTER_OF_EARTH_ANDREW}
+            name="Andrew Brandt"
+            from="Concordia, Missouri"
+            role="Team Member"
+            program="Computer Science"
           />
         </ul>
       </section>
