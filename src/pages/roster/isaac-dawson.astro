@@ -1,0 +1,49 @@
+---
+/*
+ * isaac-dawson.astro
+ * Isaac Dawson
+ * 2023-08-13
+ *
+ * My Roster Page for CUNE
+ */
+
+/* Make sure to import your roster image just like this, as then Astro will optimize the formating of it. */
+// import ISAAC_DAWSON_PROFILE_PIC from "../../users/dawso/ISAAC_DAWSON_PROFILE_PIC.jpg";
+import ISAAC_DAWSON_PROFILE_PIC from "../../assets/roster/co-ian-kollipara.jpg";
+
+/*
+ * These components are used to build your roster page.
+ * Think of them as prestyled building blocks.
+ * If you are interested in doing more of it yourself,
+ * the website is built using TailwindCSS, so give it a look
+ */
+import RosterHeader from "../../components/RosterHeader.astro";
+import RosterLayout from "../../layouts/RosterLayout.astro";
+import RosterSection from "../../components/RosterSection.astro";
+import RosterImage from "../../components/RosterImage.astro";
+
+const data = {
+  img: ISAAC_DAWSON_PROFILE_PIC /* The Profile Picture for your roster page */,
+  name: "Isaac Dawson" /* The name you want displayed. Use Capital Letters */,
+  role: "Freshman member of the CUNE Programming Team" /* The "role" you have on the team. I would just use your year in school, like Senior, Junior, etc. */,
+  email: "isaac.dawson@cune.org" /* Your CUNE Email */,
+  /* A List of your Interests. Make sure to write them how you want them to show up */
+  interests: [
+    "Computer Science",
+    "Beat Saber and Hollow Knight",
+    "Reading, generally Epic Fantasy",
+  ],
+};
+---
+
+<RosterLayout {...data}>
+  <RosterHeader {...data} />
+  <!-- For any extra sections you would like to add, just create a new "RosterSection" and give it a title, then just write.  -->
+  <!-- For any images, use the RosterImage Component imported at the Top. -->
+  <RosterSection title="Biography">
+    Isaac Dawson is a Freshman at CUNE. He is a member of the Programming Team
+    and is majoring in Computer Science. His most recent accomplishments include
+    crushing at wii golf and assisting in the production of the CUNE Computer
+    Science escape room.
+  </RosterSection>
+</RosterLayout>
