@@ -1,6 +1,7 @@
 ---
 import Head from "../components/Head.astro";
 import Navbar from "../components/Navbar.astro";
+import MEMBER_TYTUS_WOODBURN from "../assets/roster/tytus-woodburn.jpeg";
 import COACH_IAN_KOLLIPARA from "../assets/roster/co-ian-kollipara.jpg";
 import ANDREW_BRANDT from "../assets/roster/andrew.jpg";
 import JACOB_WOODMANCY from "../assets/roster/jacob-woodmancy.png";
@@ -94,6 +95,17 @@ import ALYSSA_BUTLER from "../assets/roster/alyssa-butler.jpg";
           />
         </ul>
       </section>
+      <RosterAbstract
+        img={MEMBER_TYTUS_WOODBURN}
+        name="Tytus Woodburn"
+        from="York, Nebraska"
+        role="Junior"
+        program="Computer Science"
+        projects={[
+          ["Escape Room", "/software-development/escape-room"],
+          ["Team Website", "/"],
+        ]}
+      />
       <section>
         <h2 class="text-3xl font-bold tracking-wide text-center">Alumni</h2>
       </section>
