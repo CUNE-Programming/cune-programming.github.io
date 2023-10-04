@@ -10,6 +10,10 @@ module.exports = {
         accent: "#e3c10b",
       },
     },
+    fontFamily: {
+      sans: ["Graphik", "sans-serif"],
+      serif: ["Merriweather", "serif"],
+    },
   },
   plugins: [],
 };
