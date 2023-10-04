@@ -2,6 +2,7 @@
 import Head from "../components/Head.astro";
 import Navbar from "../components/Navbar.astro";
 import COACH_IAN_KOLLIPARA from "../assets/roster/co-ian-kollipara.jpg";
+import ANDREW_BRANDT from "../assets/roster/andrew.jpg";
 import JACOB_WOODMANCY from "../assets/roster/jacob-woodmancy.png";
 import CADEN_KORELL from "../assets/roster/caden-korell.jpg";
 import RosterAbstract from "../components/RosterAbstract.astro";
@@ -29,18 +30,19 @@ import ALYSSA_BUTLER from "../assets/roster/alyssa-butler.jpg";
         <h2 class="text-3xl font-bold tracking-wide text-center pb-5">
           Coaches
         </h2>
-        <RosterAbstract
-          img={COACH_IAN_KOLLIPARA}
-          name="Ian Kollipara"
-          from="Lincoln, Nebraska"
-          role="Assistant Coach"
-          program="PhD Student at University of Nebraska - Lincoln"
-          projects={[
-            ["Escape Room", "/software-development/escape-room"],
-            ["Team Website", "/"],
-          ]}
-        />
-        <ul></ul>
+        <ul>
+          <RosterAbstract
+            img={COACH_IAN_KOLLIPARA}
+            name="Ian Kollipara"
+            from="Lincoln, Nebraska"
+            role="Assistant Coach"
+            program="PhD Student at University of Nebraska - Lincoln"
+            projects={[
+              ["Escape Room", "/software-development/escape-room"],
+              ["Team Website", "/"],
+            ]}
+          />
+        </ul>
       </section>
       <section>
         <h2 class="text-3xl font-bold tracking-wide text-center">Members</h2>
@@ -82,6 +84,13 @@ import ALYSSA_BUTLER from "../assets/roster/alyssa-butler.jpg";
             role="Senior"
             program="Business and Computer Science"
             projects={[["Team Website", "/"]]}
+          />
+          <RosterAbstract
+            img={ANDREW_BRANDT}
+            name="Andrew Brandt"
+            from="Concordia, Missouri"
+            role="Team Member"
+            program="Computer Science"
           />
         </ul>
       </section>

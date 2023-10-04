@@ -1,0 +1,48 @@
+---
+/*
+ * ian-kollipara.astro
+ * Ian Kollipara
+ * 2023-08-13
+ *
+ * My Roster Page for CUNE
+ */
+
+/* Make sure to import your roster image just like this, as then Astro will optimize the formating of it. */
+import IAN_KOLLIPARA_ROSTER_IMG from "../../assets/roster/andrew.jpg";
+
+/*
+ * These components are used to build your roster page.
+ * Think of them as prestyled building blocks.
+ * If you are interested in doing more of it yourself,
+ * the website is built using TailwindCSS, so give it a look
+ */
+import RosterHeader from "../../components/RosterHeader.astro";
+import RosterLayout from "../../layouts/RosterLayout.astro";
+import RosterSection from "../../components/RosterSection.astro";
+import RosterImage from "../../components/RosterImage.astro";
+
+const data = {
+  img: IAN_KOLLIPARA_ROSTER_IMG /* The Profile Picture for your roster page */,
+  name: "Andrew Brandt" /* The name you want displayed. Use Capital Letters */,
+  role: "Senior" /* The "role" you have on the team. I would just use your year in school, like Senior, Junior, etc. */,
+  email: "andrew.brandt1@cune.edu" /* Your CUNE Email */,
+  /* A List of your Interests. Make sure to write them how you want them to show up */
+  interests: [
+    "Computer",
+    "HTML",
+    "Janzow",
+    "40.9130176, -97.0894320",
+    "Other Stuff",
+  ],
+};
+---
+
+<RosterLayout {...data}>
+  <RosterHeader {...data} />
+  <!-- For any extra sections you would like to add, just create a new "RosterSection" and give it a title, then just write.  -->
+  <!-- For any images, use the RosterImage Component imported at the Top. -->
+  <RosterSection title="Biography">
+    Hi! I am Andrew Brandt. I am a senior here and it is my first year on the programming team. When I'm not studying, I enjoy 
+    working out and playing disc golf. I also work part-time as a software developer.
+  </RosterSection>
+</RosterLayout>
