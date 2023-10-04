@@ -3,6 +3,7 @@ import Head from "../components/Head.astro";
 import Navbar from "../components/Navbar.astro";
 import COACH_IAN_KOLLIPARA from "../assets/roster/co-ian-kollipara.jpg";
 import JACOB_WOODMANCY from "../assets/roster/jacob-woodmancy.png";
+import CADEN_KORELL from "../assets/roster/caden-korell.jpg";
 import RosterAbstract from "../components/RosterAbstract.astro";
 import ETHAN_LHEUREUX_ROSTER_IMG from "../assets/roster/mem-ethan-lheureux.jpeg";
 ---
@@ -27,19 +28,18 @@ import ETHAN_LHEUREUX_ROSTER_IMG from "../assets/roster/mem-ethan-lheureux.jpeg"
         <h2 class="text-3xl font-bold tracking-wide text-center pb-5">
           Coaches
         </h2>
-        <ul>
-          <RosterAbstract
-            img={COACH_IAN_KOLLIPARA}
-            name="Ian Kollipara"
-            from="Lincoln, Nebraska"
-            role="Assistant Coach"
-            program="PhD Student at University of Nebraska, Lincoln"
-            projects={[
-              ["Escape Room", "/software-development/escape-room"],
-              ["Team Website", "/"],
-            ]}
-          />
-        </ul>
+        <RosterAbstract
+          img={COACH_IAN_KOLLIPARA}
+          name="Ian Kollipara"
+          from="Lincoln, Nebraska"
+          role="Assistant Coach"
+          program="PhD Student at University of Nebraska - Lincoln"
+          projects={[
+            ["Escape Room", "/software-development/escape-room"],
+            ["Team Website", "/"],
+          ]}
+        />
+        <ul></ul>
       </section>
       <section>
         <h2 class="text-3xl font-bold tracking-wide text-center">Members</h2>
@@ -58,6 +58,17 @@ import ETHAN_LHEUREUX_ROSTER_IMG from "../assets/roster/mem-ethan-lheureux.jpeg"
             from="Cedar Falls, Iowa"
             role="Freshman"
             program="BS Student at Concordia University Nebraska"
+            projects={[
+              ["Escape Room", "/software-development/escape-room"],
+              ["Team Website", "/"],
+            ]}
+          />
+          <RosterAbstract
+            img={CADEN_KORELL}
+            name="Caden Korell"
+            from="Omaha, Nebraska"
+            role="Freshman"
+            program="Information Technology"
             projects={[
               ["Escape Room", "/software-development/escape-room"],
               ["Team Website", "/"],
