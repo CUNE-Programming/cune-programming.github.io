@@ -1,0 +1,52 @@
+---
+import { Image } from "astro:assets";
+import ESCAPE_ROOM from "../assets/escape-room-wide.jpg";
+import Navbar from "../components/Navbar.astro";
+import Layout from "../layouts/Layout.astro";
+
+const title = "Concordia Programming Team - Our Projects";
+const description =
+  "Concordia University, Nebraska's Competitive Programming and Software Development Team's Software Projects";
+---
+
+<Layout {title} {description}>
+  <Navbar />
+
+  <section class="block">
+    <div class="py-16 md:py-24 lg:py-32 mx-auto w-full max-w-7xl px-5 md:px-10">
+      <div class="flex flex-col items-center">
+        <div class="mb-8 max-w-[800px] text-center md:mb-12 lg:mb-16">
+          <h2 class="text-3xl font-bold md:text-5xl">Our Projects</h2>
+          <div class="mx-auto mt-4 max-w-[528px]">
+            <p class="text-[#636262] max-[479px]:text-sm">
+              These are the projects done by the team.
+            </p>
+          </div>
+        </div>
+        <div
+          class="mb-8 grid w-full grid-cols-1 justify-items-center gap-4 sm:grid-cols-2 sm:justify-items-stretch md:mb-12 md:grid-cols-3 lg:mb-16 lg:gap-8"
+        >
+          <a
+            href="/software-development/escape-room"
+            class="flex max-w-full grid-cols-1 flex-col gap-4 rounded-md border border-[#cdcdcd] bg-white p-4 text-black max-[991px]:text-left max-[767px]:items-center max-[479px]:w-full md:p-0 max-[479px]:pt-4"
+          >
+            <Image
+              transition:name="escape-room-img"
+              src={ESCAPE_ROOM}
+              alt="Escape Room"
+              class="inline-block h-60 w-full object-cover"
+            />
+            <div
+              class="flex w-full flex-col items-center justify-start px-0 py-0 md:pb-4"
+            >
+              <div transition:name="escape-room-name" class="font-bold">
+                Escape Room
+              </div>
+              <p class="text-sm text-[#636262] sm:text-sm">Fall 2023</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,238 +1,106 @@
 ---
 import { Image } from "astro:assets";
 import Navbar from "../components/Navbar.astro";
-import Head from "../components/Head.astro";
-import Hero from "../components/Hero.astro";
-import ProjectAbstract from "../components/ProjectAbstract.astro";
-import SOFTWARE_DEVELOPMENT_HERO_IMG from "../assets/software-development-background.jpg";
 import PYTHON_LOGO from "../assets/python-logo.svg";
 import ASTRO_LOGO from "../assets/astro-logo.svg";
-import AZURE_LOGO from "../assets/azure-logo.svg";
-import VUE_LOGO from "../assets/vuejs-logo.svg";
-import RASPBERRY_PI_LOGO from "../assets/raspberry-pi-logo.png";
-import DJANGO_LOGO from "../assets/django-logo-wide.png";
+import DJANGO_LOGO from "../assets/django-logo.png";
 import FAST_API_LGO from "../assets/fastapi-logo.svg";
-import ESCAPE_ROOM_WIDE from "../assets/escape-room-wide.jpg";
-import AZURE_POSTGRES_LOGO from "../assets/azure-postgres-logo.svg";
-import AZURE_COSMOS_DB_LOGO from "../assets/azure-cosmos-db-logo.svg";
-import AZURE_REDIS_CACHE_LOGO from "../assets/azure-redis-cache-logo.svg";
-import AZURE_APP_SERVICES_LOGO from "../assets/azure-app-services-logo.svg";
-import JUPYTER_LOGO from "../assets/jupyter-logo.svg";
-import SCIKIT_LEARN_LOGO from "../assets/scikitlearn-logo.svg";
-import KAGGLE_LOGO from "../assets/kaggle-logo.svg";
+import Layout from "../layouts/Layout.astro";
+import ESCAPE_ROOM from "../assets/escape-room-wide.jpg";
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <Head title="Concordia Programming Team - Software Development">
-    <meta
-      name="description"
-      content="Concordia University, Nebraska's Competitive Programming and Software Development Team"
-    />
-  </Head>
-  <body
-    class="bg-primary text-light w-screen h-screen overflow-x-hidden overflow-y-scroll flex flex-col"
-  >
-    <Navbar />
-    <Hero
-      img={SOFTWARE_DEVELOPMENT_HERO_IMG}
-      alt="Software Development"
-      class="bg-dark/95"
+<Layout
+  title="Concordia Programming Team - Software Development"
+  description="Software Development Tools and Projects for the Concordia University, Nebraska Competitive Programming and Software Development Team"
+  class="bg-gradient-to-bl from-blue-800 via-primary to-dark text-light w-screen h-screen overflow-x-hidden"
+>
+  <Navbar />
+  <h1 class="text-5xl text-center lg:text-8xl mx-auto lg:ml-5 mt-5">
+    Software Development at Concordia
+  </h1>
+  <section class="flex flex-col mt-10 font-sans">
+    <p class="text-3xl tracking-wide p-3">
+      At Concordia we believe in preparing students enter their vocation ready
+      to contribute. We use industry-standard tools, processes, and languages.
+      Gain experience on real code-bases, using tools like Github. Learn
+      powerful web frameworks such as Django or FastAPI. Become famaliar with
+      SQL and Database Administration. Become a Jack of all trades or a
+      specialist, either way Concordia Programming Team is here to help <em
+        >you</em
+      >
+       succeed.
+    </p>
+    <p class="text-3xl tracking-wide p-3">
+      A great developer is not just a great programmer. At Concordia you can
+      develop those soft skills that separate the cream from the crop. Learn how
+      to work in teams and collaborate around software. Gain experience with
+      stakeholders. Become not just a great programmer, but a complete engineer.
+    </p>
+    <!-- <section class="flex flex-row gap-5 mx-5"> -->
+    <!--   <div class="flex flex-row gap-5"> -->
+    <!--     <a -->
+    <!--       href="https://python.org" -->
+    <!--       class="bg-gradient-to-tl from-transparent to-light/10 shadow-md rounded ring ring-light/10 w-48 h-48 hover:shadow-2xl hover:shadow-light/30 transition-all" -->
+    <!--     > -->
+    <!--       <Image class="" src={PYTHON_LOGO} alt="Python" /> -->
+    <!--     </a> -->
+    <!--     <a -->
+    <!--       href="https://astro.build" -->
+    <!--       class="bg-gradient-to-tl from-transparent to-light/10 shadow-md rounded ring ring-light/10 w-48 h-48 hover:shadow-2xl hover:shadow-light/30 transition-all" -->
+    <!--     > -->
+    <!--       <Image class="" src={ASTRO_LOGO} alt="Astro" /> -->
+    <!--     </a> -->
+    <!--   </div> -->
+    <!--   <div class="flex flex-row gap-5"> -->
+    <!--     <a -->
+    <!--       href="https://fastapi.tiangolo.com/" -->
+    <!--       class="bg-gradient-to-tl from-transparent to-light/10 shadow-md rounded ring ring-light/10 w-48 h-48 hover:shadow-2xl hover:shadow-light/30 transition-all" -->
+    <!--     > -->
+    <!--       <Image class="p-5" src={FAST_API_LGO} alt="FastAPI" /> -->
+    <!--     </a> -->
+    <!--     <a -->
+    <!--       href="https://djangoproject.com" -->
+    <!--       class="bg-gradient-to-tl from-transparent to-light/10 shadow-md rounded ring ring-light/10 w-48 h-48 hover:shadow-2xl hover:shadow-light/30 transition-all" -->
+    <!--     > -->
+    <!--       <Image -->
+    <!--         class="w-[168px] h-[168px] object-contain p-5" -->
+    <!--         src={DJANGO_LOGO} -->
+    <!--         alt="Django" -->
+    <!--       /> -->
+    <!--     </a> -->
+    <!--   </div> -->
+    <!-- </section> -->
+  </section>
+  <section>
+    <hr class="mx-48" />
+    <h2 class="text-3xl lg:text-6xl mx-auto lg:ml-5 my-5">Our Projects</h2>
+    <ul
+      class="grid lg:[grid-template-columns:0.33fr_0.33fr_0.33fr] w-full gap-5"
     >
-      <h1 class="text-3xl lg:text-6xl font-sans font-bold tracking-wide">
-        Software Development
-      </h1>
-      <p class="italic text-gray-400 text-xl lg:text-3xl mt-2 font-sans">
-        Competitive Programming and Software Development
-      </p>
-    </Hero>
-    <section
-      class="bg-light text-dark flex flex-col-reverse lg:flex-row px-auto lg:px-24 py-5 px-5"
-    >
-      <section>
-        <h2 class="tracking-wide font-bold text-center text-2xl lg:text-4xl">
-          Learn Industry-Level Skills in School
-        </h2>
-        <ul class="w-full grid grid-cols-1 lg:grid-cols-4 gap-5 mt-5">
-          <li
-            class="flex flex-col gap-5 border-2 border-dark p-5 rounded-md shadow-md"
-          >
-            <h3 class="font-bold tracking-wide text-center text-2xl">
-              Full-Stack Web Development
-            </h3>
-            <ul
-              class="grid grid-cols-3 items-center gap-4 justify-items-center my-auto"
-            >
-              <li>
-                <Image
-                  class="w-1/2 lg:w-3/4 mx-auto"
-                  src={PYTHON_LOGO}
-                  alt="Python"
-                  width={PYTHON_LOGO.width}
-                  height={PYTHON_LOGO.height}
-                />
-              </li>
-              <li>
-                <Image
-                  class="w-1/2 lg:w-3/4 mx-auto"
-                  src={VUE_LOGO}
-                  alt="Vue"
-                />
-              </li>
-              <li>
-                <Image
-                  class="w-1/2 lg:w-3/4 mx-auto"
-                  src={ASTRO_LOGO}
-                  alt="Astro"
-                />
-              </li>
-              <li>
-                <Image
-                  class="w-1/2 lg:w-3/4 mx-auto"
-                  src={AZURE_LOGO}
-                  alt="Azure"
-                />
-              </li>
-              <li>
-                <Image
-                  class="w-1/2 lg:w-3/4 mx-auto"
-                  src={FAST_API_LGO}
-                  alt="FastAPI"
-                />
-              </li>
-              <li>
-                <Image
-                  class="w-2/3 lg:w-full mx-auto"
-                  src={DJANGO_LOGO}
-                  alt="Django"
-                />
-              </li>
-            </ul>
-          </li>
-          <li
-            class="flex flex-col gap-5 border-2 border-primary p-5 rounded-md shadow-md"
-          >
-            <h3 class="font-bold tracking-wide text-center text-2xl">
-              Embedded Systems and IoT
-            </h3>
-            <ul
-              class="grid grid-cols-1 lg:grid-cols-1 items-center gap-4 justify-items-center"
-            >
-              <li onclick="window.location.href = 'https://raspberrypi.com';">
-                <Image
-                  class="w-1/4 lg:w-1/2 object-contain mx-auto"
-                  src={RASPBERRY_PI_LOGO}
-                  height={RASPBERRY_PI_LOGO.height}
-                  width={RASPBERRY_PI_LOGO.width}
-                  alt="Raspberry Pi"
-                />
-              </li>
-            </ul>
-          </li>
-          <li
-            class="flex flex-col gap-5 border-2 border-dark p-5 rounded-md shadow-md"
-          >
-            <h3 class="font-bold tracking-wide text-center text-2xl">
-              Databases and Systems Administration
-            </h3>
-            <ul class="grid grid-cols-4 lg:grid-cols-2 gap-4">
-              <li>
-                <Image
-                  class="w-3/4 lg:w-1/2 mx-auto"
-                  src={AZURE_POSTGRES_LOGO}
-                  width={AZURE_POSTGRES_LOGO.width}
-                  height={AZURE_POSTGRES_LOGO.height}
-                  alt="Azure Postgres"
-                />
-              </li>
-              <li>
-                <Image
-                  class="w-3/4 lg:w-1/2 mx-auto"
-                  src={AZURE_COSMOS_DB_LOGO}
-                  width={AZURE_COSMOS_DB_LOGO.width}
-                  height={AZURE_COSMOS_DB_LOGO.height}
-                  alt="Azure Cosmos DB"
-                />
-              </li>
-              <li>
-                <Image
-                  class="w-3/4 lg:w-1/2 mx-auto"
-                  src={AZURE_REDIS_CACHE_LOGO}
-                  width={AZURE_REDIS_CACHE_LOGO.width}
-                  height={AZURE_REDIS_CACHE_LOGO.height}
-                  alt="Azure Redis Cache"
-                />
-              </li>
-              <li>
-                <Image
-                  class="w-3/4 lg:w-1/2 mx-auto"
-                  src={AZURE_APP_SERVICES_LOGO}
-                  width={AZURE_APP_SERVICES_LOGO.width}
-                  height={AZURE_APP_SERVICES_LOGO.height}
-                  alt="Azure App Services"
-                />
-              </li>
-            </ul>
-          </li>
-          <li
-            class="flex flex-col gap-5 border-2 border-primary p-5 rounded-md shadow-md"
-          >
-            <h3 class="font-bold tracking-wide text-center text-2xl">
-              Machine Learning and Data Science
-            </h3>
-            <ul class="grid grid-cols-3 gap-4 my-auto">
-              <li>
-                <Image
-                  class="w-3/4 mx-auto"
-                  src={JUPYTER_LOGO}
-                  width={JUPYTER_LOGO.width}
-                  height={JUPYTER_LOGO.height}
-                  alt="Jupyter"
-                />
-              </li>
-              <li>
-                <Image
-                  class="w-3/4 mx-auto"
-                  src={KAGGLE_LOGO}
-                  width={KAGGLE_LOGO.width}
-                  height={KAGGLE_LOGO.height}
-                  alt="Kaggle"
-                />
-              </li>
-              <li>
-                <Image
-                  class="w-3/4 mx-auto"
-                  src={SCIKIT_LEARN_LOGO}
-                  width={SCIKIT_LEARN_LOGO.width}
-                  height={SCIKIT_LEARN_LOGO.height}
-                  alt="Scikit Learn"
-                />
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </section>
-    </section>
-    <section class="bg-primary flex flex-col px-5 lg:px-24 pt-5">
-      <h2 class="font-sans font-bold tracking-wide text-3xl text-center">
-        Our Projects
-      </h2>
-      <ul class="grid grid-cols-1 lg:grid-cols-2 gap-4 py-12">
-        <ProjectAbstract
-          img={ESCAPE_ROOM_WIDE}
+      <li
+        class="w-5/6 flex flex-row gap-5 mx-auto ring ring-light/10 bg-gradient-to-tl from-transparent to-light/10 shadow-md rounded"
+      >
+        <Image
+          class="aspect-square w-1/2 object-cover rounded"
+          src={ESCAPE_ROOM}
           alt="Escape Room"
-          href="/software-development/escape-room"
-        >
-          <h4 class="text-light font-light text-4xl tracking-wide">
-            Escape Room
-          </h4>
-          <hr />
-          <p class="text-light font-sans text-xl tracking-tight">
-            A fun activity, come investigate <em>Bombordia's</em> least favorite
-            professor...
+        />
+        <div class="">
+          <a
+            class="hover:underline hover:decoration-2 hover:decoration-accent text-lg transition-all"
+            href="/software-development/escape-room"
+          >
+            <p class="text-3xl font-bold font-sans tracking-wide">
+              Escape Room
+            </p>
+          </a>
+          <hr class="mx-12" />
+          <p class="text-lg">
+            An escape room for students, community members, or faculty to
+            attempt. Built with HTML, Python, and JS.
           </p>
-        </ProjectAbstract>
-      </ul>
-    </section>
-  </body>
-</html>
+        </div>
+      </li>
+    </ul>
+  </section>
+</Layout>

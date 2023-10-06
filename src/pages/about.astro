@@ -1,0 +1,153 @@
+---
+import { Image } from "astro:assets";
+import TEAM_IMG from "../assets/programming-team-2022.jpg";
+import NIBBLE_NIBBLERS from "../assets/nibble-nibblers.jpg";
+import Navbar from "../components/Navbar.astro";
+import Layout from "../layouts/Layout.astro";
+import PYTHON from "../assets/python-logo.svg";
+import DJANGO from "../assets/django-logo.png";
+import ASTRO from "../assets/astro-logo.svg";
+import FASTAPI from "../assets/fastapi-logo.svg";
+
+const title = "Concordia Programming Team - About Us";
+const description =
+  "Concordia Competitive Programming and Software Development Team - About Us";
+---
+
+<Layout {title} {description}>
+  <Navbar />
+
+  <section class="">
+    <div class="py-16 md:py-24 lg:py-32 mx-auto w-full max-w-7xl px-5 md:px-10">
+      <div class="flex flex-col items-start gap-8 lg:gap-24">
+        <div class="flex max-w-[592px] flex-col items-start gap-8 lg:gap-14">
+          <h2 class="font-bold text-3xl md:text-5xl">About Us</h2>
+          <p class="flex-col text-[#808080] max-[479px]:text-sm">
+            The Concordia University, Nebraska's Competitive Programming and
+            Software Development Team, shortened to Concordia Programming Team,
+            is a new extra-curricular for those Computer Science and Information
+            Technology students who want a next-level experience.
+          </p>
+        </div>
+        <div
+          class="grid place-items-start gap-10 max-[991px]:gap-x-8 max-[767px]:gap-y-12 grid-cols-1 lg:grid-cols-2"
+        >
+          <Image
+            src={TEAM_IMG}
+            alt="CPT's 2022 'Unofficial Team'"
+            class="inline-block h-full w-full object-cover rounded-2xl"
+          />
+          <div
+            class="flex w-full flex-col items-start gap-5 border border-solid border-black p-20 rounded-2xl"
+          >
+            <h2 class="font-bold text-3xl md:text-5xl">Our Mission</h2>
+            <p class="flex-col text-[#808080] max-[479px]:text-sm">
+              Our job is to make you the best computer scientist that you can
+              be. To that end, we teach industry-standard tools, practices, and
+              languages. Both hard and soft skills. But skills as a developer
+              are only half the battle. To be the best computer scientist that
+              you can be requires skills and knowledge of the field itself. At
+              Concordia you'll be at a program where each professor knows you.
+              As a member of the team, you'll compete in nation-wide and
+              world-wide competitions to push your ability to the next level.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="py-16 md:py-24 lg:py-32 mx-auto w-full max-w-7xl px-5 md:px-10">
+      <div
+        class="grid items-center max-[991px]:justify-items-start grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-20"
+      >
+        <div class="max-[991px]:max-w-[720px]">
+          <h2 class="font-bold text-3xl md:text-5xl mb-5 md:mb-6 lg:mb-4 pb-8">
+            Learn Industry-Standard Languages and Frameworks
+          </h2>
+        </div>
+        <div
+          class="grid-cols-2 grid border border-solid border-[#d9d9d9] p-6 rounded-md"
+        >
+          <div
+            class="flex-col flex items-center justify-center gap-6 p-6 text-center [border-bottom:1px_solid_rgb(217,_217,_217)] [border-right:1px_solid_rgb(217,_217,_217)]"
+          >
+            <Image src={PYTHON} alt="Python" class="inline-block h-14 w-14" />
+            <p class="font-medium max-[479px]:text-sm">
+              Python is the world's most-loved language, and for good reason.
+              Here at Concordia we build your skills using a language found in
+              nearly every industry.
+            </p>
+          </div>
+          <div
+            class="flex-col flex items-center justify-center gap-6 p-6 text-center [border-bottom:1px_solid_rgb(217,_217,_217)]"
+          >
+            <Image src={ASTRO} alt="Astro" class="inline-block h-14 w-14" />
+            <p class="font-medium max-[479px]:text-sm">
+              The fundementals of the web: HTML, CSS, and JS, are alive and
+              doing well here at CUNE. We take advantage of Astro to learn how
+              to build websites the right way.
+            </p>
+          </div>
+          <div
+            class="flex-col flex items-center justify-center gap-6 p-6 text-center [border-right:1px_solid_rgb(217,_217,_217)]"
+          >
+            <Image
+              src={DJANGO}
+              alt="Django"
+              class="inline-block h-14 w-14 object-contain"
+            />
+            <p class="font-medium max-[479px]:text-sm">
+              Companies like Instragram are built on the power found in Django.
+              Learn how to harness this power to build your own websites and
+              products here at CUNE.
+            </p>
+          </div>
+          <div
+            class="flex-col flex items-center justify-center gap-6 p-6 text-center"
+          >
+            <Image src={FASTAPI} alt="FastAPI" class="inline-block h-14 w-14" />
+            <p class="font-medium max-[479px]:text-sm">
+              A newer technology, FastAPI has grown into a well-loved web
+              framework. Learn how to utilize the latest and greatest features
+              of Python. Build RESTful APIs the right way.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="py-16 md:py-24 lg:py-32 mx-auto w-full max-w-7xl px-5 md:px-10">
+    <div
+      class="grid items-center max-[991px]:justify-items-start grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-20"
+    >
+      <div class="max-[991px]:max-w-[720px]">
+        <h3 class="mt-6 font-bold mb-4 text-2xl md:text-3xl">
+          Gain Experience at Nation-wide and World-wide Programming Competitions
+        </h3>
+        <div class="max-w-[480px] mb-6 md:mb-10 lg:mb-12">
+          <p class="text-[#636262]">
+            We compete in multiple different competitions over the course of the
+            year, including ICPC and the Universal Cup. You'll learn how to
+            decompose, solve, and debug problems against some of the best in the
+            nation.
+          </p>
+        </div>
+        <a
+          href="mailto:marcus.gubanyi@cune.edu"
+          class="inline-block border border-solid border-primary bg-primary px-6 py-4 text-center font-bold text-light transition hover:border-black hover:bg-white rounded-full hover:text-black"
+          >Reach out and Learn More!</a
+        >
+      </div>
+      <div>
+        <Image
+          src={NIBBLE_NIBBLERS}
+          alt="Nibble Nibblers"
+          class="mx-auto inline-block h-full w-full max-w-[640px] object-cover rounded-2xl"
+        />
+      </div>
+    </div>
+  </div>
+</Layout>

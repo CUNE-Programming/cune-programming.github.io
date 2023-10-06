@@ -1,8 +1,23 @@
 ---
+import { ViewTransitions } from "astro:transitions";
+import Head from "../components/Head.astro";
 
+type Props = {
+  title: string;
+  description: string;
+  class?: string;
+};
+
+const { title, description, ...rest } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-  <slot />
+  <Head {title}>
+    <meta name="description" content={description} />
+    <ViewTransitions />
+  </Head>
+  <body id="body" class={rest["class"]}>
+    <slot />
+  </body>
 </html>

@@ -1,173 +1,69 @@
 ---
 import { Image } from "astro:assets";
 import Navbar from "../components/Navbar.astro";
-import Head from "../components/Head.astro";
-import Cross from "../components/icons/Cross.astro";
-import Users from "../components/icons/Users.astro";
-import ShiningStar from "../components/icons/Shining-Star.astro";
-import Resume from "../components/icons/Resume.astro";
-import nibbleNibblersPic from "../assets/nibble-nibblers.jpg";
-import programmingTeamPic from "../assets/programming-team-2022.jpg";
-import cuneLogo from "../assets/cune-logo.png";
-import astroLogo from "../assets/astro-logo.svg";
-import pythonLogo from "../assets/python-logo.svg";
-import githubLogo from "../assets/github-logo.svg";
-import icpcLogo from "../assets/icpc-logo.png";
+import WellerTower from "../assets/wellerTower.jpeg";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <Head title="Concordia Programming Team">
-    <meta
-      name="description"
-      content="The Home Website for the Concordia University, Nebraska Competitive Programming and Software Development Team"
-    />
-  </Head>
-  <body
-    class="bg-primary text-light w-screen h-screen overflow-x-hidden overflow-y-scroll flex flex-col"
-  >
-    <Navbar />
-    <section class="flex flex-col mx-auto text-center" id="Title Section">
+<style>
+  .fade-in {
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+</style>
+
+<Layout
+  title="Concordia Programming Team"
+  description="The home for Concordia University, Nebraska Competitive Programming and Software Development"
+  class="bg-gray-900 text-light w-screen h-screen overflow-x-hidden lg:overflow-y-hidden flex flex-col"
+>
+  <section class="grid h-full w-full place-content-center px-10 pt-10 gap-5">
+    <div class="flex flex-col gap-5 lg:w-1/2 h-3/4 lg:h-1/2 m-auto">
       <Image
-        class="w-full"
-        src={cuneLogo}
-        width={cuneLogo.width}
-        height={cuneLogo.height}
-        alt=""
-        loading="eager"
-        decoding="sync"
+        class="mx-auto h-1/2 object-cover rounded-lg fade-in"
+        src={WellerTower}
+        alt="Weller Tower"
       />
-      <h1 class="text-3xl lg:text-6xl font-sans font-bold tracking-wide">
+      <h1
+        transition:name="logo"
+        class="text-5xl lg:text-8xl font-sans font-bold text-center bg-gradient-to-r from-blue-700 to-blue-400 bg-clip-text text-transparent py-5"
+      >
         Concordia Programming Team
       </h1>
-      <p class="italic text-gray-400 text-xl lg:text-3xl mt-2 font-sans">
-        Competitive Programming and Software Development
+      <p class="text-lg lg:text-2xl w-7/8 ml-auto font-light tracking-wide">
+        Concordia University, Nebraska’s programming team can help you improve
+        your programming knowledge and skills. You’ll join a group of students
+        dedicated to programming and software development. Whether your goal is
+        to pursue software development, game development or simply to expand
+        your programming skills, Concordia’s programming team can help prepare
+        you for a successful career in the booming tech industry.
       </p>
-    </section>
-    <section
-      class="stroke-primary fill-primary mx-auto mt-24 text-center bg-light text-primary py-12"
-    >
-      <ul class="flex flex-col lg:flex-row gap-12 xl:gap-52 mx-10">
-        <li class="flex flex-col items-center">
-          <Cross />
-          <h2 class="font-semibold tracking-wide text-2xl">Christ Centered</h2>
-          <p>
-            Concordia University, Nebraska is one of the few LCMS Universities
-            in the country. Come grow in both your programming ability, and in
-            your faith.
-          </p>
-        </li>
-        <li class="flex flex-col items-center">
-          <Users />
-          <h2 class="font-semibold tracking-wide text-2xl">Team-Based</h2>
-          <p>
-            We recognize that programming is more than an individual. Grow in
-            your soft skills as a member of the Concordia Programming Team.
-          </p>
-        </li>
-        <li class="flex flex-col items-center">
-          <Resume />
-          <h2 class="font-semibold tracking-wide text-2xl">
-            Power Up your Resume
-          </h2>
-          <p>
-            Work on real-world projects using industry-standard tools and
-            languages. Each of which can empower your resume for your future
-            career!
-          </p>
-        </li>
-        <li class="flex flex-col items-center">
-          <ShiningStar />
-          <h2 class="font-semibold tracking-wide text-2xl">Be Known</h2>
-          <p>
-            At CUNE you aren't just another face, you are a loved and valued
-            member of our communitee. As a member of CPT, you are someone who
-            your coaches will know and work to make sure you succeed!
-          </p>
-        </li>
-      </ul>
-    </section>
-    <section
-      class="flex flex-col gap-10 lg:flex-row lg:px-10 xl:px-52 py-12 bg-dark px-10"
-    >
-      <Image
-        class="lg:w-[50%] rounded-lg px-4 lg:mx-auto object-contain"
-        src={nibbleNibblersPic}
-        width={nibbleNibblersPic.width}
-        height={nibbleNibblersPic.height}
-        alt="The Nibble Nibblers Team"
-      />
-      <div class="mx-auto text-center">
-        <h2 class="text-center text-2xl lg:text-4xl font-sans">
-          Software Development
-        </h2>
-        <p class="text-xl mt-12">
-          We use a variety of industry-standard languages and tools to build
-          real-world projects. To learn more check out
-          <a
-            class="underline underline-offset-2 decoration-light hover:decoration-primary focus:text-primary transition-all"
-            href="/software-development"
-          >
-            Software Development
-          </a>.
-        </p>
-        <div class="grid grid-cols-3 mx-4 gap-10 mt-12 lg:mt-24">
-          <Image
-            class=""
-            src={pythonLogo}
-            height={pythonLogo.height}
-            width={pythonLogo.width}
-            alt="python"
-          />
-          <Image
-            class=""
-            src={githubLogo}
-            height={githubLogo.height}
-            width={githubLogo.width}
-            alt="github"
-          />
-          <Image
-            class=""
-            src={astroLogo}
-            height={astroLogo.height}
-            width={astroLogo.width}
-            alt="astro"
-          />
-        </div>
+      <div class="flex flex-row gap-5 mx-auto pb-5 lg:pb-0">
+        <a
+          transition:name="roster"
+          class="px-5 py-3 border border-light hover:bg-light hover:text-gray-900 transition-colors duration-[400ms]"
+          href="/roster">Roster</a
+        >
+        <a
+          transition:name="about"
+          class="px-5 py-3 border border-light hover:bg-light hover:text-gray-900 transition-colors duration-[400ms]"
+          href="/about">About</a
+        >
+        <a
+          transition:name="projects"
+          class="px-5 py-3 border border-light hover:bg-light hover:text-gray-900 transition-colors duration-[400ms]"
+          href="/projects">Our Projects</a
+        >
       </div>
-    </section>
-    <section
-      class="flex flex-col gap-10 lg:flex-row-reverse lg:px-10 xl:px-52 py-12 px-10"
-    >
-      <Image
-        class="lg:w-[50%] rounded-lg mx-auto object-cover px-4"
-        src={programmingTeamPic}
-        width={programmingTeamPic.width}
-        height={programmingTeamPic.height}
-        alt="Programming Team Picture"
-      />
-      <div class="mx-auto text-center">
-        <h2 class="text-center text-2xl lg:text-4xl font-sans">
-          Competitive Programming
-        </h2>
-        <p class="text-xl mt-12">
-          Learn and compete in nation-wide programming competitions using Python
-          and C. CPT primarily competes in <a
-            class="underline underline-offset-2 decoration-light hover:decoration-dark focus:text-dark transition-all"
-            href="https://icpc.global/">ICPC</a
-          >. To learn more check out <a
-            class="underline underline-offset-2 decoration-light hover:decoration-dark focus:text-dark transition-all"
-            href="/competitive-programming">Competitive Programming</a
-          >.
-        </p>
-        <Image
-          class="w-[75%] mx-auto pt-12 rounded-lg object-cover"
-          src={icpcLogo}
-          width={icpcLogo.width}
-          height={icpcLogo.height}
-          alt="icpc"
-        />
-      </div>
-    </section>
-  </body>
-</html>
+    </div>
+  </section>
+</Layout>

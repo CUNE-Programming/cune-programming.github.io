@@ -1,5 +1,4 @@
 ---
-import Head from "../components/Head.astro";
 import Navbar from "../components/Navbar.astro";
 import MEMBER_TYTUS_WOODBURN from "../assets/roster/tytus-woodburn.jpeg";
 import COACH_IAN_KOLLIPARA from "../assets/roster/co-ian-kollipara.jpg";
@@ -9,45 +8,28 @@ import CADEN_KORELL from "../assets/roster/caden-korell.jpg";
 import RosterAbstract from "../components/RosterAbstract.astro";
 import ETHAN_LHEUREUX_ROSTER_IMG from "../assets/roster/mem-ethan-lheureux.jpeg";
 import ALYSSA_BUTLER from "../assets/roster/alyssa-butler.jpg";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <Head title="Concordia Programming Team Roster">
-    <meta
-      name="description"
-      content="Concorida University, Nebraska Programming Team Roster"
-    />
-  </Head>
-  <body>
-    <Navbar />
-    <h1
-      class="bg-primary text-light font-sans font-bold tracking-wide text-center p-12 text-5xl"
-    >
-      Roster
-    </h1>
-    <section class="w-full grid lg:grid-cols-3 gap-4">
-      <section>
-        <h2 class="text-3xl font-bold tracking-wide text-center pb-5">
-          Coaches
-        </h2>
-        <ul>
-          <RosterAbstract
-            img={COACH_IAN_KOLLIPARA}
-            name="Ian Kollipara"
-            from="Lincoln, Nebraska"
-            role="Assistant Coach"
-            program="PhD Student at University of Nebraska - Lincoln"
-            projects={[
-              ["Escape Room", "/software-development/escape-room"],
-              ["Team Website", "/"],
-            ]}
-          />
-        </ul>
-      </section>
-      <section>
-        <h2 class="text-3xl font-bold tracking-wide text-center">Members</h2>
-        <ul>
+<Layout
+  title="Concordia Programming Team - Roster"
+  description="The Concordia Competitive Programming and Software Development Team's Roster"
+  class="bg-[#f2f2f7]"
+>
+  <Navbar />
+
+  <div>
+    <div class="py-16 md:py-24 lg:py-32 mx-auto w-full max-w-7xl px-5 md:px-10">
+      <div class="">
+        <div class="text-center">
+          <h2 class="font-bold text-3xl md:text-5xl">Our Team</h2>
+          <div class="mx-auto mt-4 max-w-[528px] mb-8 md:mb-12 lg:mb-16">
+            <p class="text-[#636262]">Meet our members, coaches, and alumni!</p>
+          </div>
+        </div>
+        <div
+          class="grid w-full max-[991px]:grid-flow-row max-[991px]:place-content-center max-[479px]:justify-items-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 md:gap-6"
+        >
           <RosterAbstract
             img={JACOB_WOODMANCY}
             name="Jacob Woodmancy"
@@ -90,7 +72,7 @@ import ALYSSA_BUTLER from "../assets/roster/alyssa-butler.jpg";
             img={ANDREW_BRANDT}
             name="Andrew Brandt"
             from="Concordia, Missouri"
-            role="Team Member"
+            role="Senior"
             program="Computer Science"
           />
           <RosterAbstract
@@ -104,11 +86,19 @@ import ALYSSA_BUTLER from "../assets/roster/alyssa-butler.jpg";
               ["Team Website", "/"],
             ]}
           />
-        </ul>
-      </section>
-      <section>
-        <h2 class="text-3xl font-bold tracking-wide text-center">Alumni</h2>
-      </section>
-    </section>
-  </body>
-</html>
+          <RosterAbstract
+            img={COACH_IAN_KOLLIPARA}
+            name="Ian Kollipara"
+            from="Lincoln, Nebraska"
+            role="Assistant Coach"
+            program="PhD Student at University of Nebraska - Lincoln"
+            projects={[
+              ["Escape Room", "/software-development/escape-room"],
+              ["Team Website", "/"],
+            ]}
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

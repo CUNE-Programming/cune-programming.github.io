@@ -27,20 +27,17 @@ const data = {
   role: "Senior" /* The "role" you have on the team. I would just use your year in school, like Senior, Junior, etc. */,
   email: "alyssa.butler@cune.org" /* Your CUNE Email */,
   /* A List of your Interests. Make sure to write them how you want them to show up */
-  interests: [
-    "Piano",
-    "Computer Science",
-    "Rock Band",
-  ],
+  interests: ["Piano", "Computer Science", "Rock Band"],
 };
 ---
 
 <RosterLayout {...data}>
-  <RosterHeader {...data} />
-  <!-- For any extra sections you would like to add, just create a new "RosterSection" and give it a title, then just write.  -->
-  <!-- For any images, use the RosterImage Component imported at the Top. -->
-  <RosterSection title="Biography">
-    Alyssa Butler is a senior at Concordia. She is pursuing a 
-    Bachelor of Arts in Business Administration and Comptuer Science.
-  </RosterSection>
+  <RosterHeader {...data}>
+    <!-- For any extra sections you would like to add, just create a new "RosterSection" and give it a title, then just write.  -->
+    <!-- For any images, use the RosterImage Component imported at the Top. -->
+    <RosterSection title="Biography">
+      Alyssa Butler is a senior at Concordia. She is pursuing a Bachelor of Arts
+      in Business Administration and Comptuer Science.
+    </RosterSection>
+  </RosterHeader>
 </RosterLayout>

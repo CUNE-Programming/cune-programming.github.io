@@ -29,62 +29,26 @@ const from_ = Astro.props["from"];
 const rosterHref = `/roster/${slugify(name)}`;
 ---
 
-<li
-  onclick={`window.location.href = "${rosterHref}"`}
-  class="flex flex-col lg:flex-row gap-4 mx-3 shadow-lg p-3 rounded-md border border-dark hover:-translate-y-5 transition-all hover:cursor-pointer hover:shadow-accent"
+<div
+  class="flex-col flex grid-cols-1 gap-4 px-8 py-6 max-[991px]:mx-auto max-[991px]:max-w-[288px] max-[991px]:text-left max-[767px]:items-center max-[767px]:p-8 max-[767px]:text-center max-[479px]:w-4/5"
 >
   <Image
-    class="h-[10rem] w-[10rem] object-cover rounded-full my-auto mx-auto"
+    transition:name={`${name}Img`}
     src={img}
-    width={img.width}
-    height={img.height}
     alt={name}
+    class="inline-block h-52 w-full object-cover max-[767px]:max-w-full max-[479px]:max-w-[208px] mb-4"
   />
-  <section class="flex-1 lg:border-l lg:border-l-dark lg:pl-2">
-    <h3
-      class="font-light text-center tracking-wide text-2xl border-b border-b-dark lg:text-left"
+  <div class="w-full max-w-none text-center">
+    <div transition:name={`${name}Name`} class="font-bold">{name}</div>
+    <div
+      transition:name={`${name}Role`}
+      class="text-md font-bold text-[#636262]"
     >
-      {name}
-    </h3>
-    <table class="table-auto w-full">
-      <tbody class="text-lg">
-        <tr>
-          <td class="font-bold">Role</td>
-          <td>{role}</td>
-        </tr>
-        <tr>
-          <td class="font-bold">From</td>
-          <td>{from_}</td>
-        </tr>
-        {
-          program && (
-            <tr>
-              <td class="font-bold">Program</td>
-              <td>{program}</td>
-            </tr>
-          )
-        }
-        <tr>
-          <td class="font-bold">Projects</td>
-          <td>
-            <ul class="list-none list-inside">
-              {
-                projects.map(([name, href]) => (
-                  <li>
-                    <a
-                      class="underline underline-offset-2 decoration-primary"
-                      {href}
-                    >
-                      {name}
-                    </a>
-                  </li>
-                ))
-              }
-            </ul>
-          </td>
-          <slot />
-        </tr>
-      </tbody>
-    </table>
-  </section>
-</li>
+      {role} - {from_}
+    </div>
+    <div class="text-md text-[#636262]">{program}</div>
+    <a href={rosterHref} class="text-md text-[#636262] hover:underline"
+      >Learn More..</a
+    >
+  </div>
+</div>

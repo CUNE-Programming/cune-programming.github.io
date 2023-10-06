@@ -27,21 +27,18 @@ const data = {
   role: "Junior" /* The "role" you have on the team. I would just use your year in school, like Senior, Junior, etc. */,
   email: "tytus.woodburn@cune.org" /* Your CUNE Email */,
   /* A List of your Interests. Make sure to write them how you want them to show up */
-  interests: [
-    "Valorant",
-    "Competitive Programming",
-    "3D printing",
-  ],
+  interests: ["Valorant", "Competitive Programming", "3D printing"],
 };
 ---
 
 <RosterLayout {...data}>
-  <RosterHeader {...data} />
-  <!-- For any extra sections you would like to add, just create a new "RosterSection" and give it a title, then just write.  -->
-  <!-- For any images, use the RosterImage Component imported at the Top. -->
-  <RosterSection title="Biography">
-    Tytus Woodburn is a Undergraduate student at Concordia University persuing a degree in
-    computer science. He enjoys 3d modeling, and is the team captain for Concordia's Valorant
-    Esports team.
-  </RosterSection>
+  <RosterHeader {...data}>
+    <!-- For any extra sections you would like to add, just create a new "RosterSection" and give it a title, then just write.  -->
+    <!-- For any images, use the RosterImage Component imported at the Top. -->
+    <RosterSection title="Biography">
+      Tytus Woodburn is a Undergraduate student at Concordia University persuing
+      a degree in computer science. He enjoys 3d modeling, and is the team
+      captain for Concordia's Valorant Esports team.
+    </RosterSection>
+  </RosterHeader>
 </RosterLayout>
