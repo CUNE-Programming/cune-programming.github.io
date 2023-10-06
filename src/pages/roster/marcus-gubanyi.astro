@@ -1,0 +1,58 @@
+---
+/*
+ * ian-kollipara.astro
+ * Ian Kollipara
+ * 2023-08-13
+ *
+ * My Roster Page for CUNE
+ */
+
+/* Make sure to import your roster image just like this, as then Astro will optimize the formating of it. */
+import MARCUS_GUBANYI_ROSTER_IMG from "../../assets/roster/co-marcus-gubanyi.jpg";
+
+/*
+ * These components are used to build your roster page.
+ * Think of them as prestyled building blocks.
+ * If you are interested in doing more of it yourself,
+ * the website is built using TailwindCSS, so give it a look
+ */
+import RosterHeader from "../../components/RosterHeader.astro";
+import RosterLayout from "../../layouts/RosterLayout.astro";
+import RosterSection from "../../components/RosterSection.astro";
+import RosterImage from "../../components/RosterImage.astro";
+
+const data = {
+  img: MARCUS_GUBANYI_ROSTER_IMG /* The Profile Picture for your roster page */,
+  name: "Marcus Gubanyi" /* The name you want displayed. Use Capital Letters */,
+  role: "Head Coach" /* The "role" you have on the team. I would just use your year in school, like Senior, Junior, etc. */,
+  email: "marcus.gubanyi@cune.edu" /* Your CUNE Email */,
+  /* A List of your Interests. Make sure to write them how you want them to show up */
+  interests: [
+    "Graph Theory",
+    "Data Science",
+    "Computer Science Education",
+    "Super Smash Bros. Ultimate",
+  ],
+};
+---
+
+<RosterLayout {...data}>
+  <RosterHeader {...data}>
+    <!-- For any extra sections you would like to add, just create a new "RosterSection" and give it a title, then just write.  -->
+    <!-- For any images, use the RosterImage Component imported at the Top. -->
+    <RosterSection title="Biography">
+      Marcus Gubanyi is an Assistant Professor at Concordia University. He
+      serves as Department Chair for the Department of Math and Computer
+      Science. Marcus Gubanyi earned a B.S. in Computer Science and Mathematics
+      from Concordia Nebraska and an M.A. in Mathematics from University of
+      Kansas. He is currently working on a Ph.D. in Computer Science at
+      University of Nebraska-Lincoln. His research interests include geospatial
+      data mining and applications of graph theory, focusing on using machine
+      learning models to identify and quantify events in social processes.
+      Before coming to Concordia in 2018, Gubanyi worked as a software engineer,
+      developing information systems for medical and government agencies.
+      Gubanyi and his wife, Jessica, have been together since high school and
+      both graduated from Concordia. They have three sons.
+    </RosterSection>
+  </RosterHeader>
+</RosterLayout>
