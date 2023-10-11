@@ -13,7 +13,7 @@ const memberPhrase = role === "alumni" ? `an ${role}` : `a ${role}`;
 const description = `The roster page for ${name}, ${memberPhrase} of Concordia University Nebraska Competitive Programming and Software Development Team.`;
 ---
 
-<Layout title={"Concordia Programming Team - ${name}"} {description}>
+<Layout title={`Concordia Programming Team - ${name}`} {description}>
   <Navbar />
   <main class="w-5/6 mx-auto">
     <slot />
