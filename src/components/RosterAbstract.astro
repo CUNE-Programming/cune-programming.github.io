@@ -29,26 +29,25 @@ const from_ = Astro.props["from"];
 const rosterHref = `/roster/${slugify(name)}`;
 ---
 
-<div
-  class="flex-col flex grid-cols-1 gap-4 px-8 py-6 max-[991px]:mx-auto max-[991px]:max-w-[288px] max-[991px]:text-left max-[767px]:items-center max-[767px]:p-8 max-[767px]:text-center max-[479px]:w-4/5"
->
-  <Image
-    transition:name={`${name}Img`}
-    src={img}
-    alt={name}
-    class="inline-block h-52 w-full object-cover max-[767px]:max-w-full max-[479px]:max-w-[208px] mb-4"
-  />
-  <div class="w-full max-w-none text-center">
-    <div transition:name={`${name}Name`} class="font-bold">{name}</div>
-    <div
-      transition:name={`${name}Role`}
-      class="text-md font-bold text-[#636262]"
-    >
-      {role} - {from_}
+<a href={rosterHref} class="text-md text-[#636262] hover:underline">
+  <div
+    class="flex-col flex grid-cols-1 gap-4 px-8 py-6 max-[991px]:mx-auto max-[991px]:max-w-[288px] max-[991px]:text-left max-[767px]:items-center max-[767px]:p-8 max-[767px]:text-center max-[479px]:w-4/5 hover:cursor-pointer"
+  >
+    <Image
+      transition:name={`${name}Img`}
+      src={img}
+      alt={name}
+      class="inline-block h-52 w-full object-cover max-[767px]:max-w-full max-[479px]:max-w-[208px] mb-4"
+    />
+    <div class="w-full max-w-none text-center">
+      <div transition:name={`${name}Name`} class="font-bold">{name}</div>
+      <div
+        transition:name={`${name}Role`}
+        class="text-md font-bold text-[#636262]"
+      >
+        {role} - {from_}
+      </div>
+      <div class="text-md text-[#636262]">{program}</div>
     </div>
-    <div class="text-md text-[#636262]">{program}</div>
-    <a href={rosterHref} class="text-md text-[#636262] hover:underline"
-      >Learn More..</a
-    >
   </div>
-</div>
+</a>

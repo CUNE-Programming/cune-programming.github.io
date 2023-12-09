@@ -7,7 +7,7 @@
  * Abstract for a Project shown on Software Development Page
  */
 
-import { ImageMetadata } from "astro";
+import type { ImageMetadata } from "astro";
 import Hero from "./Hero.astro";
 
 type Props = {
@@ -20,7 +20,8 @@ const { img, alt, href } = Astro.props;
 ---
 
 <li
-  onclick={`window.location.href = '${href}'`}
+  @click={`window.location.href = '${href}'`}
+  role="link"
   class="relative shadow-2xl transition-all duration-500 hover:-translate-y-5 hover:ring-dark hover:ring-8 hover:ring-offset-accent hover:ring-offset-4 hover:cursor-pointer"
 >
   <Hero {img} {alt} class="bg-dark/70">
