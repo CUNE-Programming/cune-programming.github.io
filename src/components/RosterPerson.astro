@@ -1,0 +1,36 @@
+---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+type Props = {
+  src?: ImageMetadata;
+  name: string;
+  descriptor: string;
+};
+
+const { src, name, descriptor } = Astro.props;
+
+const imageSrc =
+  src ??
+  `https://ui-avatars.com/api/?name=${name
+    .replaceAll(" ", "+")
+    .replaceAll("'", "")
+    .replaceAll("-", "")}&background=172b54&color=fff&size=256`;
+---
+
+<li
+  x-data={`{name: '${name.toLowerCase()}', descriptor: '${descriptor.toLowerCase()}', show: true}`}
+  x-show="show"
+  x-init="$watch('search', (value) => show = name.includes(value.toLowerCase()))"
+>
+  <Image
+    src={imageSrc}
+    alt={`${descriptor} ${name}`}
+    inferSize={true}
+    class="mx-auto h-24 w-24 rounded-full object-cover"
+  />
+  <h2 class="mt-6 text-base font-bold leading-7 -tracking-tight text-gray-900">
+    {name}
+  </h2>
+  <p class="text-sm leading-6 text-gray-600">{descriptor}</p>
+</li>

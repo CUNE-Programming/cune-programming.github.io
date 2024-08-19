@@ -4,173 +4,156 @@ import TEAM_IMG from "../assets/programming-team-2022.jpg";
 import NIBBLE_NIBBLERS from "../assets/nibble-nibblers.jpg";
 import Navbar from "../components/Navbar.astro";
 import Layout from "../layouts/Layout.astro";
-import PYTHON from "../assets/python-logo.svg";
+import Team2024 from "../assets/team-2024.jpg";
+import Team2024_1 from "../assets/team-2024-1.jpg";
+import Python from "../assets/python-logo.svg";
+import Laravel from "../assets/laravel-logo.png";
 import DJANGO from "../assets/django-logo.png";
 import ASTRO from "../assets/astro-logo.svg";
 import FASTAPI from "../assets/fastapi-logo.svg";
 import REACT from "../assets/react-logo.svg";
-
-const title = "Concordia Programming Team - About Us";
-const description =
-  "Concordia Competitive Programming and Software Development Team - About Us";
 ---
 
-<Layout {title} {description}>
+<Layout title="About Us">
   <Navbar />
-
-  <section class="">
-    <div class="py-16 md:py-24 lg:py-32 mx-auto w-full max-w-7xl px-5 md:px-10">
-      <div class="flex flex-col items-start gap-8 lg:gap-24">
-        <div class="flex max-w-[592px] flex-col items-start gap-8 lg:gap-14">
-          <h2 class="font-bold text-3xl md:text-5xl">About Us</h2>
-          <p class="flex-col text-[#808080] max-[479px]:text-sm">
-            The Concordia University, Nebraska's Competitive Programming and
-            Software Development Team, shortened to Concordia Programming Team,
-            is a new extra-curricular for those Computer Science and Information
-            Technology students who want a next-level experience.
-          </p>
-        </div>
-        <div
-          class="grid place-items-start gap-10 max-[991px]:gap-x-8 max-[767px]:gap-y-12 grid-cols-1 lg:grid-cols-2"
-        >
-          <Image
-            src={TEAM_IMG}
-            alt="CPT's 2022 'Unofficial Team'"
-            class="inline-block h-full w-full object-cover rounded-2xl"
-          />
-          <div
-            class="flex w-full flex-col items-start gap-5 border border-solid border-black p-20 rounded-2xl"
-          >
-            <h2 class="font-bold text-3xl md:text-5xl">Our Mission</h2>
-            <p class="flex-col text-[#808080] max-[479px]:text-sm">
-              Our job is to make you the best computer scientist that you can
-              be. To that end, we teach industry-standard tools, practices, and
-              languages. Both hard and soft skills. But skills as a developer
-              are only half the battle. To be the best computer scientist that
-              you can be requires skills and knowledge of the field itself. At
-              Concordia you'll be at a program where each professor knows you.
-              As a member of the team, you'll compete in nation-wide and
-              world-wide competitions to push your ability to the next level.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block">
-    <div class="py-16 md:py-24 lg:py-32 mx-auto w-full max-w-7xl px-5 md:px-10">
-      <div
-        class="grid items-center max-[991px]:justify-items-start grid-cols-1 gap-8 sm:gap-20"
+  <div class="bg-white px-6 py-32 lg:px-8">
+    <article class="mx-auto max-w-3xl text-base leading-7 text-gray-700">
+      <p class="text-base font-semibold leading-7 text-cune-blue">
+        What is the
+      </p>
+      <h1
+        class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
       >
-        <div class="max-[991px]:max-w-[720px]">
-          <h2 class="font-bold text-3xl md:text-5xl mb-5 md:mb-6 lg:mb-4 pb-8">
-            Learn Industry-Standard Languages and Frameworks
-          </h2>
-        </div>
-        <div
-          class="grid-cols-2 grid border border-solid border-[#d9d9d9] p-6 rounded-md"
-        >
-          <div
-            class="flex-col flex items-center justify-center gap-6 p-6 text-center [border-bottom:1px_solid_rgb(217,_217,_217)] [border-right:1px_solid_rgb(217,_217,_217)]"
-          >
-            <Image src={PYTHON} alt="Python" class="inline-block h-24 w-24" />
-            <p class="font-medium max-[479px]:text-sm">
-              Python, the world's most beloved programming language, offers
-              unparalleled versatility and user-friendliness, making it a
-              favorite across industries. At Concordia, we recognize Python's
-              impact on the software industry and provide hands-on experience in
-              web development, data analysis, machine learning, and automation.
-              Master Python with us to become a sought-after professional, ready
-              for a rewarding career journey. Seize the opportunity to harness
-              the power of Python at Concordia.
-            </p>
-          </div>
-          <div
-            class="flex-col flex items-center justify-center gap-6 p-6 text-center [border-bottom:1px_solid_rgb(217,_217,_217)]"
-          >
-            <Image src={ASTRO} alt="Astro" class="inline-block h-24 w-24" />
-            <p class="font-medium max-[479px]:text-sm">
-              In the dynamic realm of web development, Concordia University,
-              Nebraska emphasizes mastering HTML, CSS, and JavaScript—essential
-              components for building robust websites. We go beyond the basics
-              by introducing Astro, a revolutionary static site builder merging
-              modern frameworks with the simplicity of static sites. Learning
-              HTML, CSS, JavaScript, and Astro at Concordia provides a strong
-              foundation, setting you apart in the industry. Stay ahead in web
-              development with our comprehensive approach.
-            </p>
-          </div>
-          <div
-            class="flex-col flex items-center justify-center gap-6 p-6 text-center [border-right:1px_solid_rgb(217,_217,_217)]"
-          >
+        Programming Team
+      </h1>
+      <p class="mt-6 text-xl leading-8">
+        The Concordia University, Nebraska's Competitive Programming and
+        Software Development Team, shortened to Concordia Programming Team, is a
+        new extra-curricular for those Computer Science and Information
+        Technology students who want a next-level experience.
+      </p>
+      <figure class="mt-16">
+        <Image
+          class="object-cover bg-gray-50 rounded-xl aspect-video"
+          src={Team2024}
+          alt="2024 Team featuring Andrew Brandt, Alyssa Butler, and Alec Johnston"
+        />
+        <figcaption class="mt-4 flex gap-x-2 text-sm leading-6 text-gray-500">
+          Team Members Andrew Brandt, Alyssa Butler, and Alec Johnston work
+          together to debug some code.
+        </figcaption>
+      </figure>
+      <section class="max-w-7xl mt-10">
+        <h2 class="text-2xl font-bold tracking-tight text-gray-900">
+          Our Mission
+        </h2>
+        <p class="mt-6">
+          Our job is to make you the best computer scientist that you can be. To
+          that end, we teach industry-standard tools, practices, and languages.
+          Both hard and soft skills. But skills as a developer are only half the
+          battle. To be the best computer scientist that you can be requires
+          skills and knowledge of the field itself. At Concordia you'll be at a
+          program where each professor knows you. As a member of the team,
+          you'll compete in nation-wide and world-wide competitions to push your
+          ability to the next level.
+        </p>
+      </section>
+      <section class="max-w-7xl mt-10">
+        <h2 class="text-2xl font-bold tracking-tight text-gray-900">
+          Learn Industry-Standard Languages and Tools
+        </h2>
+        <p class="mt-6">
+          At Concordia we teach industry standard languages and tools to prepare
+          you for wherever you are called.
+        </p>
+        <div class="flex items-center mt-6 gap-x-3">
+          <figure class="">
             <Image
-              src={DJANGO}
-              alt="Django"
-              class="inline-block h-24 w-24 object-contain"
+              class="object-cover bg-gray-50 rounded-xl aspect-square mx-auto"
+              src={Python}
+              alt="2024 Team featuring Andrew Brandt, Alyssa Butler, and Alec Johnston"
             />
-            <p class="font-medium max-[479px]:text-sm">
-              Unlock the potential of Django at Concordia University, Nebraska,
-              following in the footsteps of successful platforms like Instagram,
-              Spotify, and Pinterest. Django is more than a backend framework;
-              it's a robust tool for building fast, secure, and scalable web
-              applications. Our hands-on approach ensures you master Django's
-              features, emphasizing clean code, MVC architecture, and efficient
-              testing. Beyond technical skills, we offer opportunities for
-              nationwide and worldwide programming competitions, fostering
-              recognition, personal growth, and networking. Join us to create
-              remarkable websites and products with Django.
-            </p>
-          </div>
-          <div
-            class="flex-col flex items-center justify-center gap-6 p-6 text-center"
-          >
-            <Image src={REACT} alt="React" class="inline-block h-24 w-24" />
-            <p class="font-medium max-[479px]:text-sm">
-              Level up your web development skills at Concordia University,
-              Nebraska, with our React training, focusing on the world's most
-              popular front-end framework. Beyond React's efficiency, we instill
-              a mindset centered on component-based architecture, reusability,
-              and modularity principles, enhancing your development efficiency
-              and expanding career opportunities. Covering React's features like
-              state management, routing, and form handling, our training
-              emphasizes best practices and industry standards. Join us for a
-              dynamic career in web development with the React mindset.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="py-16 md:py-24 lg:py-32 mx-auto w-full max-w-7xl px-5 md:px-10">
-    <div
-      class="grid items-center max-[991px]:justify-items-start grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-20"
-    >
-      <div class="max-[991px]:max-w-[720px]">
-        <h3 class="mt-6 font-bold mb-4 text-2xl md:text-3xl">
-          Gain Experience at Nation-wide and World-wide Programming Competitions
-        </h3>
-        <div class="max-w-[480px] mb-6 md:mb-10 lg:mb-12">
-          <p class="text-[#636262]">
-            We compete in multiple different competitions over the course of the
-            year, including ICPC and the Universal Cup. You'll learn how to
-            decompose, solve, and debug problems against some of the best in the
-            nation.
+            <figcaption
+              class="mt-4 flex gap-x-2 text-sm leading-6 text-gray-500 text-center"
+            >
+              The Python Language
+            </figcaption>
+          </figure>
+          <p class="">
+            Elevate your competitive programming skills with Python at Concordia
+            University, where our small, faith-driven community offers
+            personalized guidance and support. Dive into complex algorithms and
+            coding challenges while benefiting from close-knit classes and
+            dedicated faculty. At Concordia, you'll excel in programming and
+            embrace values of integrity and collaboration that will shape your
+            future.
           </p>
         </div>
-        <a
-          href="mailto:marcus.gubanyi@cune.edu"
-          class="inline-block border border-solid border-primary bg-primary px-6 py-4 text-center font-bold text-light transition hover:border-black hover:bg-white rounded-full hover:text-black"
-          >Reach out and Learn More!</a
-        >
-      </div>
-      <div>
-        <Image
-          src={NIBBLE_NIBBLERS}
-          alt="Nibble Nibblers"
-          class="mx-auto inline-block h-full w-full max-w-[640px] object-cover rounded-2xl"
-        />
+        <figure class="mt-16">
+          <Image
+            class="object-contain bg-gray-50 px-1.5 py-2.5 rounded-xl aspect-square mx-auto h-56 w-full"
+            src={Laravel}
+            alt="Laravel Logo"
+          />
+          <figcaption
+            class="mt-4 flex gap-x-2 text-sm leading-6 text-gray-500 text-center"
+          >
+            <a target="_blank" href="https://laravel.com">
+              Laravel, the Framework for PHP Artisans
+            </a>
+          </figcaption>
+        </figure>
+        <p class="mt-10">
+          Unlock your potential with Laravel at Concordia University, where
+          you'll gain hands-on experience building dynamic web applications in a
+          supportive, faith-driven environment. Our small class sizes ensure
+          personalized attention as you master this powerful PHP framework.
+          Embrace your passion for coding and stand out in the tech industry
+          while upholding the values of integrity and community that define
+          Concordia.
+        </p>
+      </section>
+      <section class="max-w-7xl mt-10">
+        <h2 class="text-2xl font-bold tracking-tight text-gray-900">
+          Compete Against Schools Across the Country in Programming Competitions
+        </h2>
+        <figure class="mt-16">
+          <Image
+            class="object-cover bg-gray-50 rounded-xl aspect-video"
+            src={Team2024_1}
+            alt="2024 Team featuring Tytus Woodburn and Andrew Pfeiffer"
+          />
+          <figcaption class="mt-4 flex gap-x-2 text-sm leading-6 text-gray-500">
+            Team Members Tytus Woodburn and Andrew Pfeiffer work to solve a
+            problem
+          </figcaption>
+        </figure>
+        <p class="mt-6">
+          We compete in multiple different competitions over the course of the
+          year. These include, but are not limited to: the International
+          Collegiate Programming Competition (ICPC) and the Consortium for
+          Computing Science in Colleges (CCSC). Learn how to decompose problems,
+          apply algorithms and develop structures to build solutions, all while
+          working with your team.
+        </p>
+      </section>
+    </article>
+    <hr class="max-w-7xl mx-auto mt-16" />
+    <div class="lg:px-8 sm:py-32 sm:px-6 py-24 px-6">
+      <div class="mx-auto max-w-2xl text-center" id="cta">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          Reach out Today!
+        </h2>
+        <p class="mx-auto mt-6 text-lg leading-8 text-gray-600">
+          If you are intested in joing our team, or learning more, please reach
+          out to us and we will get back to you as soon as we can!
+        </p>
+        <div class="mt-10 flex items-center justify-center gap-x-6">
+          <a
+            class="rounded-md bg-cune-blue px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm"
+            href="mailto:ian.kollipara@cune.edu">Reach Out</a
+          >
+        </div>
       </div>
     </div>
   </div>

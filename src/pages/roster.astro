@@ -1,124 +1,140 @@
 ---
 import Navbar from "../components/Navbar.astro";
-import MEMBER_TYTUS_WOODBURN from "../assets/roster/tytus-woodburn.jpeg";
-import COACH_IAN_KOLLIPARA from "../assets/roster/co-ian-kollipara.jpg";
-import COACH_MARCUS_GUBANYI from "../assets/roster/co-marcus-gubanyi.jpg";
-import ISAAC_DAWSON from "../assets/roster/isaac-dawson.jpg";
-import ANDREW_BRANDT from "../assets/roster/andrew.jpg";
-import JACOB_WOODMANCY from "../assets/roster/jacob-woodmancy.png";
-import CADEN_KORELL from "../assets/roster/caden-korell.jpg";
-import RosterAbstract from "../components/RosterAbstract.astro";
-import ETHAN_LHEUREUX_ROSTER_IMG from "../assets/roster/mem-ethan-lheureux.jpeg";
-import ALYSSA_BUTLER from "../assets/roster/alyssa-butler.jpg";
 import Layout from "../layouts/Layout.astro";
+import RosterPerson from "../components/RosterPerson.astro";
+
+// Image Imports
+import AaronCumming from "../assets/roster/aaron-cumming.jpg";
+import AbrahamGomez from "../assets/roster/abraham-gomez.jpg";
+import AleksaChambers from "../assets/roster/aleksa-chambers.jpg";
+import AlecJohnston from "../assets/roster/alexander-johnston.jpg";
+import AlyssaButler from "../assets/roster/alyssa-butler.jpg";
+import AndrewBrandt from "../assets/roster/andrew-brandt.jpg";
+import AndrewFynaardt from "../assets/roster/andrew-fynaardt.jpg";
+import CadenKorell from "../assets/roster/caden-korell.jpg";
+import CaseyPerlingerJett from "../assets/roster/casey-perlinger-jett.jpg";
+import IanKollipara from "../assets/roster/co-ian-kollipara.jpg";
+import MarcusGubanyi from "../assets/roster/co-marcus-gubanyi.jpg";
+import DavidMarin from "../assets/roster/david-marin.jpg";
+import EthanLHeureux from "../assets/roster/ethan-lheureux.jpg";
+import IsaacDawson from "../assets/roster/isaac-dawson.jpg";
+import JacobWoodmancy from "../assets/roster/jacob-woodmancy.png";
+import SilasCurtis from "../assets/roster/silas-curtis.jpg";
+import TytusWoodburn from "../assets/roster/tytus-woodburn.jpg";
 ---
 
-<Layout
-  title="Concordia Programming Team - Roster"
-  description="The Concordia Competitive Programming and Software Development Team's Roster"
->
+<Layout title="Roster">
   <Navbar />
-
-  <div>
-    <div class="py-16 md:py-24 lg:py-32 mx-auto w-full max-w-7xl px-5 md:px-10">
-      <div class="">
-        <div class="text-center">
-          <h2 class="font-bold text-3xl md:text-5xl">Our Team</h2>
-          <div class="mx-auto mt-4 max-w-[528px] mb-8 md:mb-12 lg:mb-16">
-            <p class="text-[#636262]">Meet our members, coaches, and alumni!</p>
-          </div>
-        </div>
-        <div
-          class="grid w-full max-[991px]:grid-flow-row max-[991px]:place-content-center max-[479px]:justify-items-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 md:gap-6"
+  <div class="bg-white py-24 sm:py-32" x-data="{ search: '' }">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl lg:mx-0">
+        <h1
+          class="text-3xl font-bold -tracking-tight text-gray-900 sm:text-4xl"
         >
-          <RosterAbstract
-            img={JACOB_WOODMANCY}
-            name="Jacob Woodmancy"
-            from="Grant, Nebraska"
-            role="Alumni"
-            program="Computer Science and Mathematics"
-            projects={[["Team Website", "/"]]}
-          />
-          <RosterAbstract
-            img={ETHAN_LHEUREUX_ROSTER_IMG}
-            name="Ethan L'Heureux"
-            from="Cedar Falls, Iowa"
-            role="Freshman"
-            program="BS Student at Concordia University Nebraska"
-            projects={[
-              ["Escape Room", "/software-development/escape-room"],
-              ["Team Website", "/"],
-            ]}
-          />
-          <RosterAbstract
-            img={CADEN_KORELL}
-            name="Caden Korell"
-            from="Omaha, Nebraska"
-            role="Freshman"
-            program="Information Technology"
-            projects={[
-              ["Escape Room", "/software-development/escape-room"],
-              ["Team Website", "/"],
-            ]}
-          />
-          <RosterAbstract
-            img={ALYSSA_BUTLER}
-            name="Alyssa Butler"
-            from="Houston, Texas"
-            role="Alumni"
-            program="Business and Computer Science"
-            projects={[["Team Website", "/"]]}
-          />
-          <RosterAbstract
-            img={ANDREW_BRANDT}
-            name="Andrew Brandt"
-            from="Concordia, Missouri"
-            role="Alumni"
-            program="Computer Science"
-          />
-          <RosterAbstract
-            img={MEMBER_TYTUS_WOODBURN}
-            name="Tytus Woodburn"
-            from="York, Nebraska"
-            role="Junior"
-            program="Computer Science"
-            projects={[
-              ["Escape Room", "/software-development/escape-room"],
-              ["Team Website", "/"],
-            ]}
-          />
-          <RosterAbstract
-            img={ISAAC_DAWSON}
-            name="Isaac Dawson"
-            from="Cedar Falls, Iowa"
-            role="Freshman"
-            program="Student at Concordia University, Nebraska"
-            projects={[["Team Website", "/"]]}
-          />
-          <RosterAbstract
-            img={COACH_IAN_KOLLIPARA}
-            name="Ian Kollipara"
-            from="Lincoln, Nebraska"
-            role="Assistant Coach"
-            program="PhD Student at University of Nebraska - Lincoln"
-            projects={[
-              ["Escape Room", "/software-development/escape-room"],
-              ["Team Website", "/"],
-            ]}
-          />
-          <RosterAbstract
-            img={COACH_MARCUS_GUBANYI}
-            name="Marcus Gubanyi"
-            from="Seward, Nebraska"
-            role="Head Coach"
-            program="Assistant Professor at Concordia University, Nebraska"
-            projects={[
-              ["Escape Room", "/software-development/escape-room"],
-              ["Team Website", "/"],
-            ]}
-          />
-        </div>
+          Our Team
+        </h1>
+        <p class="mt-6 text-lg leading-8 text-gray-600">
+          Meet our members, coaches, and alumni of the team!
+        </p>
       </div>
+      <ul
+        role="list"
+        class="mx-auto mt-20 grid max-w-2xl grid-cols-2 gap-x-8 gap-y-16 text-center sm:grid-cols-3 md:grid-cols-4 lg:mx-0 lg:max-w-none lg:grid-cols-5 xl:grid-cols-6"
+      >
+        <RosterPerson
+          src={AaronCumming}
+          name="Aaron Cumming"
+          descriptor="Junior"
+        />
+        <RosterPerson
+          src={AbrahamGomez}
+          name="Abe Gomez"
+          descriptor="Sophomore"
+        />
+        <RosterPerson name="Aidan Nachi" descriptor="Sophomore" />
+        <RosterPerson
+          src={AleksaChambers}
+          name="Aleksa Chambers"
+          descriptor="Sophomore"
+        />
+        <RosterPerson
+          src={AlecJohnston}
+          name="Alec Johnston"
+          descriptor="Alumni 2024"
+        />
+        <RosterPerson
+          src={AlyssaButler}
+          name="Alyssa Butler"
+          descriptor="Alumni 2023"
+        />
+        <RosterPerson
+          src={AndrewBrandt}
+          name="Andrew Brandt"
+          descriptor="Alumni 2023"
+        />
+        <RosterPerson
+          src={AndrewFynaardt}
+          name="Andrew Fynaardt"
+          descriptor="Junior"
+        />
+        <RosterPerson name="Andrew Pfeiffer" descriptor="Alumni 2024" />
+        <RosterPerson
+          src={CadenKorell}
+          name="Caden Korell"
+          descriptor="Sophomore"
+        />
+        <RosterPerson
+          src={CaseyPerlingerJett}
+          name="Casey Perlinger-Jett"
+          descriptor="Freshman"
+        />
+        <RosterPerson
+          src={DavidMarin}
+          name="David Marin"
+          descriptor="Sophomore"
+        />
+        <RosterPerson
+          src={EthanLHeureux}
+          name="Ethan L'Heureux"
+          descriptor="Sophomore"
+        />
+        <RosterPerson name="Heidi Blank" descriptor="Freshman" />
+        <RosterPerson
+          src={IanKollipara}
+          name="Ian Kollipara"
+          descriptor="Director / Head Coach"
+        />
+        <RosterPerson
+          src={IsaacDawson}
+          name="Isaac Dawson"
+          descriptor="Sophomore"
+        />
+        <RosterPerson
+          src={JacobWoodmancy}
+          name="Jacob Woodmancy"
+          descriptor="Alumni 2023"
+        />
+        <RosterPerson name="Lawson Fairchild" descriptor="Freshman" />
+        <RosterPerson
+          src={MarcusGubanyi}
+          name="Marcus Gubanyi"
+          descriptor="Founder / Assistant Professor of Computer Science"
+        />
+        <RosterPerson name="Matthew Kruse" descriptor="Junior" />
+        <RosterPerson name="Noah Niederklein" descriptor="Freshman" />
+        <RosterPerson name="Paul Maestas" descriptor="Freshman" />
+        <RosterPerson name="Reagan Zierke" descriptor="Freshman" />
+        <RosterPerson
+          src={SilasCurtis}
+          name="Silas Curtis"
+          descriptor="Sophomore"
+        />
+        <RosterPerson
+          src={TytusWoodburn}
+          name="Tytus Woodburn"
+          descriptor="Senior"
+        />
+      </ul>
     </div>
   </div>
 </Layout>
