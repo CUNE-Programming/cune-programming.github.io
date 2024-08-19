@@ -1,6 +1,5 @@
 ---
 import { Image } from "astro:assets";
-import Head from "../../components/Head.astro";
 import Navbar from "../../components/Navbar.astro";
 import qrcode from "../../assets/escape-room-qrcode.png";
 import escapeRoomLayout from "../../assets/escape-room-wide.jpg";
@@ -9,12 +8,15 @@ import escapeRoomDetail from "../../assets/escape-room-detail.jpeg";
 
 <!DOCTYPE html>
 <html lang="en">
-  <Head title="Escape Room">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
       content="Concorida University, Nebraska Competitive Programming and Software Development Team's Escape Room: Bombordia's Least Favorite Professor"
     />
-  </Head>
+    <title>Concordia Programming Team - Escape Room</title>
+  </head>
   <body class="flex flex-col justify-between">
     <Navbar />
     <section class="relative" id="hero">
