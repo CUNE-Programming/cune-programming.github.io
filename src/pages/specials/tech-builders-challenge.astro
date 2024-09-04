@@ -1,0 +1,175 @@
+---
+import Navbar from "../../components/Navbar.astro";
+import Layout from "../../layouts/Layout.astro";
+import CUNELogo from "../../assets/specials/tech-builders-challenge/cune-logo.jpg";
+import SCCLogo from "../../assets/specials/tech-builders-challenge/scc-logo.jpg";
+import SewardCountyLogo from "../../assets/specials/tech-builders-challenge/seward-county-logo.png";
+import SewardPublicLogo from "../../assets/specials/tech-builders-challenge/seward-public-logo.png";
+import Jtop1 from "../../assets/specials/tech-builders-challenge/jtop-1.jpg";
+import { Image } from "astro:assets";
+---
+
+<Layout title="Nebraska Tech Builders Challenge">
+  <Navbar />
+  <div
+    class="relative isolate overflow-hidden bg-gray-900 px-6 py-24 sm:py-32 lg:px-8 mt-16"
+  >
+    <div
+      aria-hidden="true"
+      class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
+      style={{ zIndex: -10 }}
+    >
+      <div
+        class="aspect-[1097_/_845] w-[68.5625rem] bg-gradient-to-tr from-gray-900 to-cune-blue opacity-20"
+        style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%);"
+      >
+      </div>
+    </div>
+    <div
+      aria-hidden="true"
+      style={{ zIndex: -10 }}
+      class="absolute -top-52 left-1/2 -translate-x-1/2 transform-gpu blue-3xl sm:-top-[28rem] sm:ml-4 sm:translate-x-0 sm:transform-gpu"
+    >
+      <div
+        class="aspect-[1097_/_845] w-[68.5625rem] bg-gradient-to-tr from-gray-900 to-cune-blue opacity-20"
+        style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%);"
+      >
+      </div>
+    </div>
+    <div class="mx-auto max-w-2xl text-center">
+      <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+        Nebraska Tech Builders Challenge
+      </h1>
+      <p class="mt-6 text-lg leading-8 text-gray-300">
+        Attend. Create. Innovate. Transform Seward in 24 Hours!<br />
+        <span class="text-gray-100 font-bold">
+          Cattle Conference Hall, 800 N Columbia Ave at 1:30 PM September 20th
+        </span>
+        <a
+          class="mt-6 rounded-md bg-transparent ring ring-white px-3.5 py-2.5 text-sm font-bold shadow-sm hover:bg-cune-blue text-white block"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdAg6XEZHVW2qHrEKp3xuez_AwTA1ak3dzOlu9GcyEStzlbUw/viewform"
+        >
+          Sign Up Now
+        </a>
+      </p>
+    </div>
+  </div>
+  <div class="bg-white py-4 sm:py-8">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <h2 class="text-center text-lg font-semibold leading-8 text-gray-900">
+        A partnership between
+      </h2>
+      <div
+        class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-4"
+      >
+        <Image
+          loading="eager"
+          src={CUNELogo}
+          alt="Concordia University, Nebraska"
+          width={158}
+          height={48}
+          class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+        />
+        <Image
+          loading="eager"
+          src={SCCLogo}
+          alt="Southeast Community College (SCC)"
+          width={158}
+          height={48}
+          class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+        />
+        <Image
+          loading="eager"
+          src={SewardCountyLogo}
+          alt="Seward County Camber of Commerce"
+          width={158}
+          height={48}
+          class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+        />
+        <Image
+          loading="eager"
+          src={SewardPublicLogo}
+          alt="Seward Public Schools"
+          width={158}
+          height={48}
+          class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+        />
+      </div>
+    </div>
+  </div>
+
+  <article class="mx-auto max-w-3xl text-base leading-7 text-gray-700 py-8">
+    <p class="text-base font-semibold leading-7 text-cune-blue">
+      Introducing the
+    </p>
+    <h1
+      class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+    >
+      Nebraska Tech Builders Challenge
+    </h1>
+    <p class="mt-6 text-xl leading-8">
+      Join us for an exhilarating two-day challenge, during which you'll bring
+      your ideas to life and turn your vision into reality!
+    </p>
+    <figure class="mt-16">
+      <Image
+        class="object-cover bg-gray-50 rounded-xl aspect-video"
+        src={Jtop1}
+        alt="Janzow Campus Center, where the event will be held"
+      />
+    </figure>
+    <section class="max-w-7xl mt-10">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900">
+        Who is it for?
+      </h2>
+      <p class="mt-6">
+        This event is open to all high school and college students, whether
+        you're a seasoned coder or simply curious about how technology can solve
+        real-world problems.
+      </p>
+    </section>
+    <section class="max-w-7xl mt-10">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900">
+        What experience do I need?
+      </h2>
+      <p class="mt-6">
+        No prior experience is needed—just bring your creativity and enthusiasm!
+        Complete a workshop on building software without programming, learn from
+        experts, and take a break with fun activities like video games and board
+        games. Collaborate with fellow students, tackle challenges, and compete
+        for prizes.
+      </p>
+    </section>
+    <section class="max-w-7xl mt-10">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900">
+        When is it?
+      </h2>
+      <p class="mt-6">
+        <time datetime="">September 20st 1:30PM - September 21st 1:30 PM</time>
+        <br />
+         It will be hosted at Concordia University in Seward, Nebraska.
+        <br />
+        <address>800 N Columbia Avenue, Seward, NE, 68434</address>
+      </p>
+    </section>
+    <hr class="max-w-7xl mx-auto mt-16" />
+    <div class="lg:px-8 sm:py-32 sm:px-6 py-24 px-6">
+      <div class="mx-auto max-w-2xl text-center" id="cta">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          Sign up Today!
+        </h2>
+        <p class="mx-auto mt-6 text-lg leading-8 text-gray-600">
+          If you are intested in joing, please sign up using the form below!
+        </p>
+        <div class="mt-10 flex items-center justify-center gap-x-6">
+          <a
+            class="rounded-md bg-cune-blue px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdAg6XEZHVW2qHrEKp3xuez_AwTA1ak3dzOlu9GcyEStzlbUw/viewform"
+          >
+            Reach Out
+          </a>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>
