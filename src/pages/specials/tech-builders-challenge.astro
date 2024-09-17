@@ -43,11 +43,17 @@ import { Image } from "astro:assets";
       <p class="mt-6 text-lg leading-8 text-gray-300">
         Attend. Create. Innovate. Transform Seward in 24 Hours!<br />
         <span class="text-gray-100 font-bold">
-          Cattle Conference Hall, 800 N Columbia Ave at 1:30 PM November 1st.
+          Concordia University, Nebraska at 1:30 PM November 1st.
         </span>
-
-        <a class="decoration-gray-100 underline" href="#schedule">
-          Schedule available below!
+        <br />
+        <a class="decoration-gray-100 underline" href="#details">
+          Schedule and Details below!
+        </a>
+        <a
+          class="mt-6 rounded-md bg-transparent ring ring-white px-3.5 py-2.5 text-sm font-bold shadow-sm hover:bg-cune-blue text-white block"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdAg6XEZHVW2qHrEKp3xuez_AwTA1ak3dzOlu9GcyEStzlbUw/viewform"
+        >
+          Sign Up Now
         </a>
       </p>
     </div>
@@ -97,6 +103,7 @@ import { Image } from "astro:assets";
   </div>
 
   <article
+    id="details"
     class="mx-auto max-w-3xl text-base leading-7 text-gray-700 py-8 px-4 sm:px-0"
   >
     <p class="text-base font-semibold leading-7 text-cune-blue">
@@ -110,8 +117,21 @@ import { Image } from "astro:assets";
     <p class="mt-6 text-xl leading-8">
       Join us for an exhilarating two-day challenge, during which you'll bring
       your ideas to life and turn your vision into reality! <br />
+      <h3 class="text-xl font-bold tracking-tight text-gray-900 mt-3">TLDR</h3>
+      <ul class="list-inside list-disc mb-3">
+        <li>
+          Event starts at 1:30 PM November 1st & ends 1:30 PM November 2nd
+        </li>
+        <li>
+          Event is located at Cattle Conference Hall, 800 N Columbia Ave. 68434
+        </li>
+        <li>
+          Come if you are interested in technology, rural innovation, or just
+          creating solutions!
+        </li>
+      </ul>
       <a class="decoration-cune-blue underline" href="#schedule">
-        See our schedule
+        See our schedule below
       </a>
     </p>
     <figure class="mt-16">
@@ -123,31 +143,31 @@ import { Image } from "astro:assets";
     </figure>
     <section class="max-w-7xl mt-10">
       <h2 class="text-2xl font-bold tracking-tight text-gray-900">
-        Who is it for?
-      </h2>
-      <p class="mt-6">
-        This event is open to all high school and college students, whether
-        you're a seasoned coder or simply curious about how technology can solve
-        real-world problems.
-      </p>
-    </section>
-    <section class="max-w-7xl mt-10">
-      <h2 class="text-2xl font-bold tracking-tight text-gray-900">
-        What experience do I need?
-      </h2>
-      <p class="mt-6">
-        No prior experience is needed—just bring your creativity and enthusiasm!
-        Complete a workshop on building software without programming, learn from
-        experts, and take a break with fun activities like video games and board
-        games. Collaborate with fellow students, tackle challenges, and compete
-        for prizes.
-      </p>
-    </section>
-    <section class="max-w-7xl mt-10">
-      <h2 class="text-2xl font-bold tracking-tight text-gray-900">
         Frequently Asked Questions
       </h2>
       <p class="mt-6">
+        <h2
+          class="text-xl font-semibold tracking-tight text-gray-900 mt-6 mb-3"
+        >
+          Who is it for?
+        </h2>
+        <p class="mt-6">
+          This event is open to all high school and college students, whether
+          you're a seasoned coder or simply curious about how technology can
+          solve real-world problems.
+        </p>
+        <h2
+          class="text-xl font-semibold tracking-tight text-gray-900 mt-6 mb-3"
+        >
+          What experience do I need?
+        </h2>
+        <p class="mt-6">
+          No prior experience is needed—just bring your creativity and
+          enthusiasm! Complete a workshop on building software without
+          programming, learn from experts, and take a break with fun activities
+          like video games and board games. Collaborate with fellow students,
+          tackle challenges, and compete for prizes.
+        </p>
         <h3
           class="text-xl font-semibold tracking-tight text-gray-900 mt-6 mb-3"
         >
@@ -320,7 +340,7 @@ import { Image } from "astro:assets";
                 >
                   6:00PM - 7:00PM
                 </th>
-                <td class="px-6 py-4"> Pizza Dinner</td>
+                <td class="px-6 py-4"> Pizza Dinner<br />Continue Hacking</td>
               </tr>
               <tr class="bg-white">
                 <th
@@ -331,7 +351,7 @@ import { Image } from "astro:assets";
                 </th>
                 <td class="px-6 py-4">
                   Games & Video Games: Super Smash Bros. Ultimate & MarioKart 8
-                  Deluxe!</td
+                  Deluxe!<br />Continue Hacking</td
                 >
               </tr>
               <tr class="bg-white">
@@ -384,7 +404,7 @@ import { Image } from "astro:assets";
                 <td class="px-6 py-4">
                   Optional Workshop: <em class="italic"
                     >Storytelling & Pitching</em
-                  ></td
+                  ><br />Continue Hacking</td
                 >
               </tr>
               <tr class="bg-white">
@@ -395,7 +415,8 @@ import { Image } from "astro:assets";
                   9:00AM - 10:00AM
                 </th>
                 <td class="px-6 py-4">
-                  Optional workshop: <em class="italic">Design Mockups</em></td
+                  Optional workshop: <em class="italic">Design Mockups</em><br
+                  />Continue Hacking</td
                 >
               </tr>
               <tr class="bg-white">
@@ -451,5 +472,23 @@ import { Image } from "astro:assets";
       </p>
     </section>
     <hr class="max-w-7xl mx-auto mt-16" />
+    <div class="lg:px-8 sm:py-32 sm:px-6 py-24 px-6">
+      <div class="mx-auto max-w-2xl text-center" id="cta">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          Sign up Today!
+        </h2>
+        <p class="mx-auto mt-6 text-lg leading-8 text-gray-600">
+          If you are intested in joining, please sign up using the form below!
+        </p>
+        <div class="mt-10 flex items-center justify-center gap-x-6">
+          <a
+            class="rounded-md bg-cune-blue px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdAg6XEZHVW2qHrEKp3xuez_AwTA1ak3dzOlu9GcyEStzlbUw/viewform"
+          >
+            Reach Out
+          </a>
+        </div>
+      </div>
+    </div>
   </article>
 </Layout>
