@@ -9,4 +9,7 @@ import robotsTxt from "astro-robots-txt";
 export default defineConfig({
   site: "https://cune-programming.github.io",
   integrations: [tailwind(), alpinejs(), sitemap(), robotsTxt()],
+  redirects: {
+    '/': '/specials/tech-builders-challenge'
+  }
 });
